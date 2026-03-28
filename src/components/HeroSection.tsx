@@ -25,7 +25,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <img src={logo} alt="Asociación Ari Val Sar — Valari" className="w-28 md:w-36 mx-auto mb-8 brightness-0 invert opacity-80 animate-fade-in" />
+        <img src={logo} alt="Asociación Ari Val Sar — Valari" className="w-28 md:w-36 mx-auto mb-8 rounded-full animate-fade-in" />
         <p className="text-primary uppercase tracking-[0.3em] text-sm md:text-base mb-6 animate-fade-in">
           Asociación Ari Val Sar
         </p>
