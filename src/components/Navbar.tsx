@@ -39,7 +39,7 @@ const Navbar = () => {
           onClick={() => handleClick("#hero")}
           className="flex items-center gap-3"
         >
-          <img src={logo} alt="Valari" className="h-10 md:h-12 w-auto brightness-0 invert" />
+          <img src={logo} alt="Valari" className="h-10 md:h-12 w-auto rounded-full" />
           <span className="font-serif text-lg md:text-xl font-bold text-flamenco-ivory tracking-wide">
             Valari
           </span>
