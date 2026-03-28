@@ -4,7 +4,7 @@ const classes = [
   {
     title: "Baile Flamenco",
     description:
-      "Aprende los pasos, la técnica y la expresión del baile flamenco. Desde iniciación hasta nivel avanzado, con atención personalizada.",
+      "Desde iniciación hasta nivel medio con profesoras especializadas. Aprende la técnica, la expresión y la pasión del baile flamenco.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
@@ -14,7 +14,7 @@ const classes = [
   {
     title: "Sevillanas",
     description:
-      "Domina las cuatro sevillanas con gracia y alegría. Ideal para ferias, bodas y celebraciones. Todos los niveles bienvenidos.",
+      "Iniciación y perfeccionamiento. Domina las cuatro sevillanas con gracia y alegría, ideales para ferias, bodas y celebraciones.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -46,15 +46,15 @@ const ClassesSection = () => {
         }`}
       >
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-flamenco-gold uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
+          <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
             Nuestras disciplinas
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-flamenco-ivory mb-6">
             Clases y Actividades
           </h2>
-          <div className="gold-separator mb-6" />
+          <div className="brand-separator mb-6" />
           <p className="text-flamenco-ivory/60 leading-relaxed">
-            Tres disciplinas, una misma pasión. Encuentra la que más resuene contigo.
+            Tres disciplinas, una misma pasión. También contamos con grupo estable y grupo infantil.
           </p>
         </div>
 
@@ -62,10 +62,10 @@ const ClassesSection = () => {
           {classes.map((item, i) => (
             <div
               key={item.title}
-              className="group relative bg-flamenco-ivory/5 border border-flamenco-gold/10 rounded-sm p-8 text-center transition-all duration-500 hover:border-flamenco-gold/40 hover:bg-flamenco-ivory/10 hover:scale-[1.02] hover:shadow-xl hover:shadow-flamenco-gold/5"
+              className="group relative bg-flamenco-ivory/5 border border-primary/10 rounded-sm p-8 text-center transition-all duration-500 hover:border-primary/40 hover:bg-flamenco-ivory/10 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/5"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-flamenco-gold/30 flex items-center justify-center text-flamenco-gold group-hover:bg-flamenco-gold/10 transition-colors duration-300">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors duration-300">
                 {item.icon}
               </div>
               <h3 className="font-serif text-2xl font-bold text-flamenco-ivory mb-4">

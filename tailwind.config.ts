@@ -48,11 +48,10 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         flamenco: {
-          burgundy: "hsl(var(--flamenco-burgundy))",
+          red: "hsl(var(--flamenco-red))",
+          "red-light": "hsl(var(--flamenco-red-light))",
           black: "hsl(var(--flamenco-black))",
           ivory: "hsl(var(--flamenco-ivory))",
-          gold: "hsl(var(--flamenco-gold))",
-          "gold-light": "hsl(var(--flamenco-gold-light))",
           warm: "hsl(var(--flamenco-warm))",
           dark: "hsl(var(--flamenco-dark))",
         },
