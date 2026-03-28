@@ -5,7 +5,7 @@ const galleryItems = [
   { label: "Clase de sevillanas", span: "" },
   { label: "Ensayo grupal", span: "" },
   { label: "Palillos flamencos", span: "" },
-  { label: "Feria de Abril", span: "col-span-2" },
+  { label: "Feria y eventos", span: "col-span-2" },
 ];
 
 const GallerySection = () => {
@@ -20,13 +20,13 @@ const GallerySection = () => {
         }`}
       >
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-flamenco-gold uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
+          <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
             Momentos
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
             Galería
           </h2>
-          <div className="gold-separator mb-6" />
+          <div className="brand-separator mb-6" />
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto auto-rows-[180px] md:auto-rows-[200px]">
@@ -38,7 +38,7 @@ const GallerySection = () => {
               <div
                 className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
                 style={{
-                  background: `linear-gradient(${135 + i * 30}deg, hsl(350 ${30 + i * 8}% ${20 + i * 5}%) 0%, hsl(0 0% ${10 + i * 3}%) 100%)`,
+                  background: `linear-gradient(${135 + i * 30}deg, hsl(0 ${40 + i * 8}% ${20 + i * 5}%) 0%, hsl(0 0% ${10 + i * 3}%) 100%)`,
                 }}
               />
               <div className="absolute inset-0 bg-flamenco-black/40 group-hover:bg-flamenco-black/20 transition-colors duration-500" />

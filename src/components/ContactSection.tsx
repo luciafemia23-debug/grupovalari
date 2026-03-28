@@ -29,13 +29,13 @@ const ContactSection = () => {
       >
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-flamenco-gold uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
+            <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
               Da el primer paso
             </p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-flamenco-ivory mb-6">
               ¿Sientes el compás?
             </h2>
-            <div className="gold-separator mb-6" />
+            <div className="brand-separator mb-6" />
             <p className="text-flamenco-ivory/60 max-w-xl mx-auto">
               Escríbenos y empieza tu viaje por el mundo del flamenco. Estamos deseando conocerte.
             </p>
@@ -48,7 +48,7 @@ const ContactSection = () => {
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
-                className="bg-flamenco-ivory/5 border-flamenco-gold/20 text-flamenco-ivory placeholder:text-flamenco-ivory/30 focus-visible:ring-flamenco-gold/40 rounded-sm h-12"
+                className="bg-flamenco-ivory/5 border-primary/20 text-flamenco-ivory placeholder:text-flamenco-ivory/30 focus-visible:ring-primary/40 rounded-sm h-12"
               />
             </div>
             <div>
@@ -58,7 +58,7 @@ const ContactSection = () => {
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
-                className="bg-flamenco-ivory/5 border-flamenco-gold/20 text-flamenco-ivory placeholder:text-flamenco-ivory/30 focus-visible:ring-flamenco-gold/40 rounded-sm h-12"
+                className="bg-flamenco-ivory/5 border-primary/20 text-flamenco-ivory placeholder:text-flamenco-ivory/30 focus-visible:ring-primary/40 rounded-sm h-12"
               />
             </div>
             <div className="md:col-span-2">
@@ -68,7 +68,7 @@ const ContactSection = () => {
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 required
                 rows={5}
-                className="bg-flamenco-ivory/5 border-flamenco-gold/20 text-flamenco-ivory placeholder:text-flamenco-ivory/30 focus-visible:ring-flamenco-gold/40 rounded-sm resize-none"
+                className="bg-flamenco-ivory/5 border-primary/20 text-flamenco-ivory placeholder:text-flamenco-ivory/30 focus-visible:ring-primary/40 rounded-sm resize-none"
               />
             </div>
             <div className="md:col-span-2 text-center">
@@ -87,7 +87,7 @@ const ContactSection = () => {
               <a
                 key={social}
                 href="#"
-                className="text-flamenco-ivory/40 hover:text-flamenco-gold text-sm uppercase tracking-wider transition-colors duration-300"
+                className="text-flamenco-ivory/40 hover:text-primary text-sm uppercase tracking-wider transition-colors duration-300"
               >
                 {social}
               </a>
@@ -100,10 +100,10 @@ const ContactSection = () => {
       <div className="border-t border-flamenco-ivory/10 mt-24 pt-8">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-serif text-lg text-flamenco-ivory/60">
-            <span className="text-flamenco-gold italic">Valari</span> — Asociación Ari Val Sar
+            <span className="text-primary italic">Valari</span> — Asociación Ari Val Sar
           </p>
           <p className="text-flamenco-ivory/30 text-sm">
-            © 2024 Asociación Ari Val Sar. Todos los derechos reservados.
+            © 2025 Asociación Ari Val Sar. Todos los derechos reservados.
           </p>
         </div>
       </div>

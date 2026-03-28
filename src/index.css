@@ -15,8 +15,8 @@
     --popover: 40 33% 96%;
     --popover-foreground: 0 0% 8%;
 
-    --primary: 350 60% 28%;
-    --primary-foreground: 40 33% 96%;
+    --primary: 0 80% 45%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 40 30% 90%;
     --secondary-foreground: 0 0% 8%;
@@ -24,24 +24,23 @@
     --muted: 40 20% 92%;
     --muted-foreground: 0 0% 40%;
 
-    --accent: 40 50% 50%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 0 75% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 40 20% 85%;
     --input: 40 20% 85%;
-    --ring: 350 60% 28%;
+    --ring: 0 80% 45%;
 
     --radius: 0.5rem;
 
-    /* Flamenco custom tokens */
-    --flamenco-burgundy: 350 60% 28%;
+    /* Brand tokens — red, black, warm white */
+    --flamenco-red: 0 80% 45%;
+    --flamenco-red-light: 0 70% 55%;
     --flamenco-black: 0 0% 8%;
     --flamenco-ivory: 40 33% 96%;
-    --flamenco-gold: 40 70% 50%;
-    --flamenco-gold-light: 40 60% 70%;
     --flamenco-warm: 30 40% 94%;
     --flamenco-dark: 0 0% 12%;
 
@@ -87,15 +86,15 @@
     color: hsl(var(--flamenco-black));
   }
 
-  .gold-separator {
+  .brand-separator {
     @apply mx-auto;
     width: 60px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, hsl(var(--flamenco-gold)), transparent);
+    background: linear-gradient(90deg, transparent, hsl(var(--flamenco-red)), transparent);
   }
 
   .polka-pattern {
-    background-image: radial-gradient(circle, hsl(var(--flamenco-gold) / 0.08) 2px, transparent 2px);
+    background-image: radial-gradient(circle, hsl(var(--flamenco-red) / 0.06) 2px, transparent 2px);
     background-size: 24px 24px;
   }
 
@@ -108,13 +107,5 @@
 @layer utilities {
   .font-serif-display {
     font-family: 'Playfair Display', serif;
-  }
-
-  .text-gold {
-    color: hsl(var(--flamenco-gold));
-  }
-
-  .bg-burgundy {
-    background-color: hsl(var(--flamenco-burgundy));
   }
 }

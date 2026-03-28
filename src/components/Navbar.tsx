@@ -51,7 +51,7 @@ const Navbar = () => {
             <li key={item.href}>
               <button
                 onClick={() => handleClick(item.href)}
-                className="text-flamenco-ivory/80 hover:text-flamenco-gold text-sm font-medium tracking-wide uppercase transition-colors duration-300"
+                className="text-flamenco-ivory/80 hover:text-primary text-sm font-medium tracking-wide uppercase transition-colors duration-300"
               >
                 {item.label}
               </button>
@@ -77,13 +77,13 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-flamenco-black/95 backdrop-blur-md border-t border-flamenco-gold/20">
+        <div className="md:hidden bg-flamenco-black/95 backdrop-blur-md border-t border-primary/20">
           <ul className="flex flex-col items-center py-4 gap-4">
             {navItems.map((item) => (
               <li key={item.href}>
                 <button
                   onClick={() => handleClick(item.href)}
-                  className="text-flamenco-ivory/80 hover:text-flamenco-gold text-sm font-medium tracking-wide uppercase transition-colors"
+                  className="text-flamenco-ivory/80 hover:text-primary text-sm font-medium tracking-wide uppercase transition-colors"
                 >
                   {item.label}
                 </button>
