@@ -100,10 +100,10 @@ const ContactSection = () => {
       <div className="border-t border-flamenco-ivory/10 mt-24 pt-8">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-serif text-lg text-flamenco-ivory/60">
-            Arte <span className="text-flamenco-gold italic">Flamenco</span>
+            <span className="text-flamenco-gold italic">Valari</span> — Asociación Ari Val Sar
           </p>
           <p className="text-flamenco-ivory/30 text-sm">
-            © 2024 Asociación Arte Flamenco. Todos los derechos reservados.
+            © 2024 Asociación Ari Val Sar. Todos los derechos reservados.
           </p>
         </div>
       </div>

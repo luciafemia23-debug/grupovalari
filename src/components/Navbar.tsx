@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Inicio", href: "#hero" },
@@ -36,9 +37,12 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <button
           onClick={() => handleClick("#hero")}
-          className="font-serif text-xl md:text-2xl font-bold text-flamenco-ivory tracking-wide"
+          className="flex items-center gap-3"
         >
-          Arte <span className="text-flamenco-gold italic">Flamenco</span>
+          <img src={logo} alt="Valari" className="h-10 md:h-12 w-auto brightness-0 invert" />
+          <span className="font-serif text-lg md:text-xl font-bold text-flamenco-ivory tracking-wide">
+            Valari
+          </span>
         </button>
 
         {/* Desktop */}

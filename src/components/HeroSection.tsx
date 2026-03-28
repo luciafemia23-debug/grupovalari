@@ -1,3 +1,5 @@
+import logo from "@/assets/logo.png";
+
 const HeroSection = () => {
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
@@ -23,8 +25,9 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <img src={logo} alt="Asociación Ari Val Sar — Valari" className="w-28 md:w-36 mx-auto mb-8 brightness-0 invert opacity-80 animate-fade-in" />
         <p className="text-flamenco-gold uppercase tracking-[0.3em] text-sm md:text-base mb-6 animate-fade-in">
-          Asociación Cultural de Baile
+          Asociación Ari Val Sar
         </p>
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-flamenco-ivory leading-tight mb-6 animate-fade-in-up">
           Donde el arte
