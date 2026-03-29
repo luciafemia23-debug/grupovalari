@@ -24,7 +24,8 @@ const schedule = [
   {
     day: "Sábado",
     classes: [
-      { name: "Grupo estable", time: "10:00 – 12:30", place: "Centro Cívico Valdefierro", prof: "Sylvia Valle y Verónica Hidalgo" },
+      { name: "Grupo estable", time: "10:00 – 12:00", place: "Centro Cívico Valdefierro", prof: "Sylvia Valle y Verónica Hidalgo" },
+      { name: "Palillos flamencos", time: "12:00 – 13:30", place: "Sala parroquial Ntra. Sra. de Lourdes", prof: "Sylvia Valle y Verónica Hidalgo" },
       { name: "Grupo infantil", time: "12:00 – 13:00", place: "Centro Cívico Valdefierro", prof: "Sylvia Valle y Verónica Hidalgo" },
     ],
   },
