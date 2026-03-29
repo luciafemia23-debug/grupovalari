@@ -4,7 +4,7 @@ const schedule = [
   {
     day: "Martes",
     classes: [
-      { name: "Flamenco nivel medio", time: "10:00 – 12:30", place: "Centro Cívico Valdefierro", prof: "Sylvia Valle y Silvia Arilla" },
+      { name: "Flamenco nivel medio", time: "10:30 – 12:00", place: "Centro Cívico Valdefierro", prof: "Sylvia Valle y Silvia Arilla" },
       { name: "Palillos flamencos", time: "17:00 – 18:30", place: "Sala parroquial Ntra. Sra. de Lourdes", prof: "Ana Zambrano" },
     ],
   },
