@@ -2,7 +2,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const classes = [
   {
-    title: "Baile Flamenco",
+    title: "Flamenco",
     description:
       "Desde iniciación hasta nivel medio con profesoras especializadas. Aprende la técnica, la expresión y la pasión del baile flamenco.",
     icon: (
