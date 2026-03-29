@@ -18,7 +18,7 @@ const schedule = [
   {
     day: "Viernes",
     classes: [
-      { name: "Perfeccionamiento de sevillanas", time: "10:00 – 12:00", place: "Centro Cívico Valdefierro", prof: "Sylvia Valle y Silvia Arilla" },
+      { name: "Perfeccionamiento de sevillanas", time: "10:30 – 12:00", place: "Centro Cívico Valdefierro", prof: "Sylvia Valle y Silvia Arilla" },
     ],
   },
   {
