@@ -4,6 +4,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
+const socialLinks = [
+  { name: "Instagram", url: "https://www.instagram.com/grupo_valari/" },
+  { name: "Facebook", url: "https://www.facebook.com/valari.arivalsar/" },
+  { name: "YouTube", url: "https://www.youtube.com/@arivalsar-grupovalari-2607" },
+  { name: "TikTok", url: "https://www.tiktok.com/@grupo_valari" },
+];
+
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const { toast } = useToast();
@@ -33,11 +40,14 @@ const ContactSection = () => {
               Da el primer paso
             </p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-flamenco-ivory mb-6">
-              ¿Sientes el compás?
+              ¿Quieres tu espectáculo en vivo?
             </h2>
             <div className="brand-separator mb-6" />
+            <p className="text-flamenco-ivory/80 text-lg font-semibold mb-3">
+              Tipos de eventos que realizamos
+            </p>
             <p className="text-flamenco-ivory/60 max-w-xl mx-auto">
-              Escríbenos y empieza tu viaje por el mundo del flamenco. Estamos deseando conocerte.
+              Realizamos eventos privados, eventos en barrios y pueblos, ambientamos ferias… ¡y lo daremos todo! Déjanos tu nombre, tu email y descríbenos tu evento con día, tiempo de actuación que quieres y nosotras haremos magia en tu evento.
             </p>
           </div>
 
@@ -63,7 +73,7 @@ const ContactSection = () => {
             </div>
             <div className="md:col-span-2">
               <Textarea
-                placeholder="Tu mensaje..."
+                placeholder="Descríbenos tu evento..."
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 required
@@ -83,13 +93,15 @@ const ContactSection = () => {
 
           {/* Social links */}
           <div className="flex justify-center gap-8 mt-16">
-            {["Instagram", "Facebook", "YouTube"].map((social) => (
+            {socialLinks.map((social) => (
               <a
-                key={social}
-                href="#"
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-flamenco-ivory/40 hover:text-primary text-sm uppercase tracking-wider transition-colors duration-300"
               >
-                {social}
+                {social.name}
               </a>
             ))}
           </div>
