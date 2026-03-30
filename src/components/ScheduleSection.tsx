@@ -45,14 +45,14 @@ const ScheduleSection = () => {
       >
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
-            Curso 2025
+            Horarios de Clases
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-flamenco-ivory mb-4">
             Horarios y Clases
           </h2>
           <div className="brand-separator mb-6" />
           <p className="text-flamenco-ivory/60">
-            Las clases comienzan la semana del 15 de septiembre. Barrio de Valdefierro, Zaragoza.
+            Tres disciplinas, una misma pasión.
           </p>
         </div>
 
@@ -87,17 +87,17 @@ const ScheduleSection = () => {
             </h2>
             <div className="brand-separator mb-6" />
           </div>
-          <div className="bg-flamenco-ivory/5 border border-primary/10 rounded-sm p-8">
+          <div className="bg-flamenco-ivory rounded-sm p-8">
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <p className="text-primary text-sm uppercase tracking-wider mb-1">Barrio</p>
-                <p className="text-flamenco-ivory/80">Valdefierro, Zaragoza</p>
-                <p className="text-flamenco-ivory/80">España</p>
+                <p className="text-flamenco-black/80">Valdefierro, Zaragoza</p>
+                <p className="text-flamenco-black/80">España</p>
               </div>
               <div>
                 <p className="text-primary text-sm uppercase tracking-wider mb-1">Espacios</p>
-                <p className="text-flamenco-ivory/80">Centro Cívico Valdefierro</p>
-                <p className="text-flamenco-ivory/80">Sala parroquial Ntra. Sra. de Lourdes</p>
+                <p className="text-flamenco-black/80">Centro Cívico Valdefierro</p>
+                <p className="text-flamenco-black/80">Sala parroquial Ntra. Sra. de Lourdes</p>
               </div>
             </div>
           </div>
