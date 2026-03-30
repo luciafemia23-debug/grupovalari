@@ -12,16 +12,6 @@ const HeroSection = () => {
     >
       {/* Background */}
       <div className="absolute inset-0 bg-flamenco-black" />
-      {/* Logo as background */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <img
-          src={logo}
-          alt=""
-          className="w-[500px] md:w-[700px] lg:w-[900px] opacity-[0.4] select-none pointer-events-none"
-        />
-      </div>
-      {/* Gradient overlay bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-flamenco-black/80 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
