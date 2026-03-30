@@ -109,28 +109,23 @@ const ContactSection = () => {
       </div>
 
       {/* Footer */}
-      <div className="mt-24">
-        {/* Contact info bar - white background */}
-        <div className="bg-flamenco-ivory py-6">
-          <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-            <a href="tel:+34696780353" className="flex items-center gap-2 text-flamenco-black/70 hover:text-primary transition-colors">
+      <div className="border-t border-flamenco-ivory/10 mt-24 pt-8">
+        <div className="container mx-auto px-6 flex flex-col items-center gap-6 pb-8">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+            <a href="tel:+34696780353" className="flex items-center gap-2 text-flamenco-ivory/60 hover:text-primary transition-colors">
               <span>📞</span>
-              <span className="text-sm font-medium">696 780 353</span>
+              <span className="text-sm">696 780 353</span>
             </a>
-            <a href="mailto:arivalsar@gmail.com" className="flex items-center gap-2 text-flamenco-black/70 hover:text-primary transition-colors">
+            <a href="mailto:arivalsar@gmail.com" className="flex items-center gap-2 text-flamenco-ivory/60 hover:text-primary transition-colors">
               <span>✉️</span>
-              <span className="text-sm font-medium">arivalsar@gmail.com</span>
+              <span className="text-sm">arivalsar@gmail.com</span>
             </a>
-            <a href="mailto:acc.ari_val_sar@hotmail.com" className="flex items-center gap-2 text-flamenco-black/70 hover:text-primary transition-colors">
+            <a href="mailto:acc.ari_val_sar@hotmail.com" className="flex items-center gap-2 text-flamenco-ivory/60 hover:text-primary transition-colors">
               <span>✉️</span>
-              <span className="text-sm font-medium">acc.ari_val_sar@hotmail.com</span>
+              <span className="text-sm">acc.ari_val_sar@hotmail.com</span>
             </a>
           </div>
-        </div>
-
-        {/* Brand bar */}
-        <div className="border-t border-flamenco-ivory/10 bg-flamenco-black py-6">
-          <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 w-full">
             <p className="font-serif text-lg text-flamenco-ivory/60">
               <span className="text-primary italic">Grupo Valari</span> — Asociación Ari Val Sar
             </p>
