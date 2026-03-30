@@ -87,17 +87,17 @@ const ScheduleSection = () => {
             </h2>
             <div className="brand-separator mb-6" />
           </div>
-          <div className="bg-flamenco-ivory/5 border border-primary/10 rounded-sm p-8">
+          <div className="bg-flamenco-ivory rounded-sm p-8">
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <p className="text-primary text-sm uppercase tracking-wider mb-1">Barrio</p>
-                <p className="text-flamenco-ivory/80">Valdefierro, Zaragoza</p>
-                <p className="text-flamenco-ivory/80">España</p>
+                <p className="text-flamenco-black/80">Valdefierro, Zaragoza</p>
+                <p className="text-flamenco-black/80">España</p>
               </div>
               <div>
                 <p className="text-primary text-sm uppercase tracking-wider mb-1">Espacios</p>
-                <p className="text-flamenco-ivory/80">Centro Cívico Valdefierro</p>
-                <p className="text-flamenco-ivory/80">Sala parroquial Ntra. Sra. de Lourdes</p>
+                <p className="text-flamenco-black/80">Centro Cívico Valdefierro</p>
+                <p className="text-flamenco-black/80">Sala parroquial Ntra. Sra. de Lourdes</p>
               </div>
             </div>
           </div>
