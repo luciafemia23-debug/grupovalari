@@ -110,13 +110,31 @@ const ContactSection = () => {
 
       {/* Footer */}
       <div className="border-t border-flamenco-ivory/10 mt-24 pt-8">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-serif text-lg text-flamenco-ivory/60">
-            <span className="text-primary italic">Valari</span> — Asociación Ari Val Sar
-          </p>
-          <p className="text-flamenco-ivory/30 text-sm">
-            © 2025 Asociación Ari Val Sar. Todos los derechos reservados.
-          </p>
+        <div className="container mx-auto px-6 flex flex-col items-center gap-6">
+          {/* Contact info */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+            <a href="tel:+34696780353" className="flex items-center gap-2 text-flamenco-ivory/60 hover:text-primary transition-colors">
+              <span>📞</span>
+              <span className="text-sm">696 780 353</span>
+            </a>
+            <a href="mailto:arivalsar@gmail.com" className="flex items-center gap-2 text-flamenco-ivory/60 hover:text-primary transition-colors">
+              <span>✉️</span>
+              <span className="text-sm">arivalsar@gmail.com</span>
+            </a>
+            <a href="mailto:acc.ari_val_sar@hotmail.com" className="flex items-center gap-2 text-flamenco-ivory/60 hover:text-primary transition-colors">
+              <span>✉️</span>
+              <span className="text-sm">acc.ari_val_sar@hotmail.com</span>
+            </a>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 w-full">
+            <p className="font-serif text-lg text-flamenco-ivory/60">
+              <span className="text-primary italic">Grupo Valari</span> — Asociación Ari Val Sar
+            </p>
+            <p className="text-flamenco-ivory/30 text-sm">
+              © 2025 Asociación Ari Val Sar. Todos los derechos reservados.
+            </p>
+          </div>
         </div>
       </div>
     </section>
