@@ -52,7 +52,7 @@ const ScheduleSection = () => {
           </h2>
           <div className="brand-separator mb-6" />
           <p className="text-flamenco-ivory/60">
-            Las clases comienzan la semana del 15 de septiembre. Barrio de Valdefierro, Zaragoza.
+            Tres disciplinas, una misma pasión.
           </p>
         </div>
 

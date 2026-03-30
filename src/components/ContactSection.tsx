@@ -44,7 +44,7 @@ const ContactSection = () => {
             </h2>
             <div className="brand-separator mb-6" />
             <p className="text-flamenco-ivory/80 text-lg font-semibold mb-3">
-              Tipos de eventos que realizamos
+              Tipos de eventos
             </p>
             <p className="text-flamenco-ivory/60 max-w-xl mx-auto">
               Realizamos eventos privados, eventos en barrios y pueblos, ambientamos ferias… ¡y lo daremos todo! Déjanos tu nombre, tu email y descríbenos tu evento con día, tiempo de actuación que quieres y nosotras haremos magia en tu evento.
