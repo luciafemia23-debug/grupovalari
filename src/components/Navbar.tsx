@@ -41,7 +41,7 @@ const Navbar = () => {
         >
           <img src={logo} alt="Valari" className="h-10 md:h-12 w-auto rounded-full" />
           <span className="font-serif text-lg md:text-xl font-bold text-flamenco-ivory tracking-wide">
-            Valari
+            Grupo Valari
           </span>
         </button>
 

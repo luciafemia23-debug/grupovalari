@@ -31,6 +31,16 @@ const classes = [
       </svg>
     ),
   },
+  {
+    title: "Grupo Infantil",
+    description:
+      "¿Te imaginas a tu peque moviendo los pies al ritmo del flamenco? Los sábados son mágicos para los más pequeños: risas, ritmo, y movimientos que despiertan la creatividad y la confianza mientras se inician en el mundo del flamenco.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
 ];
 
 const ClassesSection = () => {
@@ -47,18 +57,15 @@ const ClassesSection = () => {
       >
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
-            Nuestras disciplinas
+            Nuestras clases
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-flamenco-ivory mb-6">
-            Clases y Actividades
+            Tres disciplinas, una misma pasión
           </h2>
           <div className="brand-separator mb-6" />
-          <p className="text-flamenco-ivory/60 leading-relaxed">
-            Tres disciplinas, una misma pasión. También contamos con grupo estable y grupo infantil.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {classes.map((item, i) => (
             <div
               key={item.title}

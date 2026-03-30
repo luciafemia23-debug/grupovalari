@@ -30,19 +30,9 @@ const AboutSection = () => {
             <p className="text-muted-foreground leading-relaxed mb-6">
               Participamos en diversas actividades: actuaciones en barrios, pueblos, bodas, eventos, despedidas... Nos encontramos en el barrio de <strong>Valdefierro</strong>, en Zaragoza (España).
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed">
               Como asociación sin ánimo de lucro, nuestras puertas están abiertas a cualquier persona que quiera descubrir la magia del baile flamenco, independientemente de su edad o experiencia.
             </p>
-            <div className="flex gap-12">
-              <div>
-                <p className="font-serif text-3xl font-bold text-primary">Cultura</p>
-                <p className="text-sm text-muted-foreground mt-1">Preservamos la tradición</p>
-              </div>
-              <div>
-                <p className="font-serif text-3xl font-bold text-primary">Comunidad</p>
-                <p className="text-sm text-muted-foreground mt-1">Unidos por la pasión</p>
-              </div>
-            </div>
           </div>
 
           {/* Visual — logo showcase */}
