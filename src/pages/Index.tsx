@@ -6,6 +6,7 @@ import GallerySection from "@/components/GallerySection";
 import ScheduleSection from "@/components/ScheduleSection";
 import ContactSection from "@/components/ContactSection";
 import LocationSection from "@/components/LocationSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -18,7 +19,7 @@ const Index = () => {
       <ScheduleSection />
       <ContactSection />
       <LocationSection />
-
+      <Footer />
     </div>
   );
 };
