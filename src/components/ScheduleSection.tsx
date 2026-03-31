@@ -35,7 +35,7 @@ const ScheduleSection = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="horarios" className="section-dark py-24 md:py-32 relative">
+    <section id="horarios" className="section-dark py-16 md:py-20 relative">
       <div className="absolute inset-0 polka-pattern-light opacity-10" />
       <div
         ref={ref}

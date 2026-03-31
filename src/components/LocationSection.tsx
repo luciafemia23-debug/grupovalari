@@ -4,7 +4,7 @@ const LocationSection = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="ubicacion" className="section-dark py-24 md:py-32 relative">
+    <section id="ubicacion" className="section-dark py-16 md:py-20 relative">
       <div className="absolute inset-0 polka-pattern-light opacity-10" />
       <div
         ref={ref}
