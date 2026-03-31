@@ -4,12 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
-const socialLinks = [
-  { name: "Instagram", url: "https://instagram.com/grupo_valari" },
-  { name: "Facebook", url: "https://www.facebook.com/valari.arivalsar/" },
-  { name: "YouTube", url: "https://www.youtube.com/@arivalsar-grupovalari-2607" },
-  { name: "TikTok", url: "https://www.tiktok.com/@grupo_valari" },
-];
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
