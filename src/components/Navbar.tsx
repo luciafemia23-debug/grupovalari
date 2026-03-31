@@ -3,12 +3,12 @@ import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Inicio", href: "#hero" },
-  { label: "Nosotros", href: "#nosotros" },
+  { label: "Nuestra Historia", href: "#nosotros" },
   { label: "Clases", href: "#clases" },
   { label: "Galería", href: "#galeria" },
-  { label: "Horarios", href: "#horarios" },
-  { label: "Comunidad", href: "#comunidad" },
+  { label: "Horarios 25/26", href: "#horarios" },
   { label: "Contacto", href: "#contacto" },
+  { label: "Ubicación", href: "#ubicacion" },
 ];
 
 const Navbar = () => {
