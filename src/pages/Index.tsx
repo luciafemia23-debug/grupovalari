@@ -18,6 +18,7 @@ const Index = () => {
       <ScheduleSection />
       <ContactSection />
       <LocationSection />
+
     </div>
   );
 };
