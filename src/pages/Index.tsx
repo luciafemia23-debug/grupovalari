@@ -5,6 +5,7 @@ import ClassesSection from "@/components/ClassesSection";
 import GallerySection from "@/components/GallerySection";
 import ScheduleSection from "@/components/ScheduleSection";
 import ContactSection from "@/components/ContactSection";
+import LocationSection from "@/components/LocationSection";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <GallerySection />
       <ScheduleSection />
       <ContactSection />
+      <LocationSection />
     </div>
   );
 };

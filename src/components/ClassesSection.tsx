@@ -60,7 +60,9 @@ const ClassesSection = () => {
             Nuestras clases
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-flamenco-ivory mb-6">
-            Tres disciplinas, una misma pasión
+            Tres disciplinas,
+            <br />
+            una misma pasión
           </h2>
           <div className="brand-separator mb-6" />
         </div>

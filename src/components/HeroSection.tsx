@@ -19,7 +19,7 @@ const HeroSection = () => {
           Asociación Ari Val Sar
         </p>
         <p className="text-flamenco-ivory/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
-          Descubre nuestra pasión
+          Bienvenidos a nuestro rinconcito andaluz
         </p>
         <div className="flex justify-center animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
           <button
