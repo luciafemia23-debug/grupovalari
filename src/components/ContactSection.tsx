@@ -4,12 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
-const socialLinks = [
-  { name: "Instagram", url: "https://instagram.com/grupo_valari" },
-  { name: "Facebook", url: "https://www.facebook.com/valari.arivalsar/" },
-  { name: "YouTube", url: "https://www.youtube.com/@arivalsar-grupovalari-2607" },
-  { name: "TikTok", url: "https://www.tiktok.com/@grupo_valari" },
-];
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -91,20 +85,7 @@ const ContactSection = () => {
             </div>
           </form>
 
-          {/* Social links */}
-          <div className="flex justify-center gap-8 mt-16">
-            {socialLinks.map((social) => (
-              <a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-flamenco-ivory/40 hover:text-primary text-sm uppercase tracking-wider transition-colors duration-300"
-              >
-                {social.name}
-              </a>
-            ))}
-          </div>
+          
         </div>
       </div>
 
