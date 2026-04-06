@@ -12,7 +12,7 @@ const AboutSection = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-start max-w-6xl mx-auto">
           {/* Text */}
           <div>
             <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
@@ -44,18 +44,11 @@ const AboutSection = () => {
             </p>
           </div>
 
-          {/* Visual — logo showcase */}
-          <div className="relative flex items-center justify-center">
-            <div className="aspect-square w-full max-w-sm rounded-sm overflow-hidden relative flex items-center justify-center"
-              style={{
-                background: `linear-gradient(135deg, hsl(0 80% 45% / 0.05) 0%, hsl(40 30% 90% / 0.5) 100%)`,
-              }}
-            >
-              <img src={logo} alt="Logo Valari" className="w-3/4 opacity-90" />
+          {/* Image */}
+          <div className="relative sticky top-32">
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img src={aboutImage} alt="Miembros de Grupo Valari" className="w-full h-auto object-cover" />
             </div>
-            {/* Decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 border border-primary/20 rounded-sm -z-10" />
-            <div className="absolute -top-4 -left-4 w-20 h-20 polka-pattern opacity-60" />
           </div>
         </div>
       </div>
