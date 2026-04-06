@@ -1,11 +1,16 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
 
 const galleryItems = [
-  { label: "Actuación en vivo", span: "col-span-2 row-span-2" },
-  { label: "Clase de sevillanas", span: "" },
-  { label: "Ensayo grupal", span: "" },
-  { label: "Palillos flamencos", span: "" },
-  { label: "Feria y eventos", span: "col-span-2" },
+  { label: "Abanicos flamencos", src: gallery1, span: "col-span-1 row-span-1" },
+  { label: "Romería", src: gallery2, span: "col-span-1 row-span-2" },
+  { label: "Grupo Valari", src: gallery3, span: "col-span-1 row-span-1" },
+  { label: "Actuación en vivo", src: gallery4, span: "col-span-2 row-span-1" },
+  { label: "En el escenario", src: gallery5, span: "col-span-1 row-span-1" },
 ];
 
 const GallerySection = () => {
@@ -29,19 +34,18 @@ const GallerySection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto auto-rows-[180px] md:auto-rows-[200px]">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto auto-rows-[200px] md:auto-rows-[250px]">
           {galleryItems.map((item, i) => (
             <div
               key={i}
               className={`group relative rounded-sm overflow-hidden cursor-pointer ${item.span}`}
             >
-              <div
-                className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
-                style={{
-                  background: `linear-gradient(${135 + i * 30}deg, hsl(0 ${40 + i * 8}% ${20 + i * 5}%) 0%, hsl(0 0% ${10 + i * 3}%) 100%)`,
-                }}
+              <img
+                src={item.src}
+                alt={item.label}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-flamenco-black/40 group-hover:bg-flamenco-black/20 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-flamenco-black/30 group-hover:bg-flamenco-black/10 transition-colors duration-500" />
               <div className="absolute inset-0 flex items-end p-4 md:p-6">
                 <p className="text-flamenco-ivory text-sm md:text-base font-medium opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                   {item.label}
