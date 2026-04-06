@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -15,6 +16,7 @@ const galleryItems = [
 
 const GallerySection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
     <section id="galeria" className="section-light py-24 md:py-32">
@@ -38,7 +40,8 @@ const GallerySection = () => {
           {galleryItems.map((item, i) => (
             <div
               key={i}
-              className={`group relative rounded-sm overflow-hidden cursor-pointer ${item.span}`}
+              className={`group relative rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-500 ${item.span}`}
+              onClick={() => setSelectedImage(i)}
             >
               <img
                 src={item.src}
@@ -55,6 +58,24 @@ const GallerySection = () => {
           ))}
         </div>
       </div>
+
+      {/* Lightbox */}
+      {selectedImage !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-flamenco-black/85 backdrop-blur-sm animate-fade-in cursor-pointer"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img
+            src={galleryItems[selectedImage].src}
+            alt={galleryItems[selectedImage].label}
+            className="max-w-[90vw] max-h-[85vh] object-contain rounded-xl shadow-2xl animate-scale-in"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <p className="absolute bottom-8 text-flamenco-ivory text-lg font-medium tracking-wide">
+            {galleryItems[selectedImage].label}
+          </p>
+        </div>
+      )}
     </section>
   );
 };
