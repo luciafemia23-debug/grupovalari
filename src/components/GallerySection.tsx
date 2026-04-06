@@ -8,12 +8,12 @@ import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 
 const galleryItems = [
-  { src: gallery1, span: "col-span-1 row-span-1" },
-  { src: gallery2, span: "col-span-1 row-span-2" },
-  { src: gallery3, span: "col-span-1 row-span-1" },
-  { src: gallery6, span: "col-span-2 row-span-1" },
-  { src: gallery4, span: "col-span-1 row-span-1" },
-  { src: gallery5, span: "col-span-1 row-span-1" },
+  { src: gallery1 },
+  { src: gallery2 },
+  { src: gallery3 },
+  { src: gallery6 },
+  { src: gallery4 },
+  { src: gallery5 },
 ];
 
 const GallerySection = () => {
@@ -38,17 +38,17 @@ const GallerySection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto auto-rows-[200px] md:auto-rows-[250px]">
+        <div className="grid grid-cols-2 gap-3 md:gap-4 max-w-4xl mx-auto">
           {galleryItems.map((item, i) => (
             <div
               key={i}
-              className={`group relative rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-500 ${item.span}`}
+              className="group relative rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-500 aspect-[4/3]"
               onClick={() => setSelectedImage(i)}
             >
               <img
                 src={item.src}
                 alt="Galería Grupo Valari"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-flamenco-black/20 group-hover:bg-flamenco-black/5 transition-colors duration-500" />
             </div>
