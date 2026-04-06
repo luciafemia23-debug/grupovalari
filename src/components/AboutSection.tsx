@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import logo from "@/assets/logo.png";
+import aboutImage from "@/assets/about-image.jpg";
 
 const AboutSection = () => {
   const { ref, isVisible } = useScrollAnimation();
