@@ -5,13 +5,15 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
 
 const galleryItems = [
-  { label: "Abanicos flamencos", src: gallery1, span: "col-span-1 row-span-1" },
-  { label: "Romería", src: gallery2, span: "col-span-1 row-span-2" },
-  { label: "Grupo Valari", src: gallery3, span: "col-span-1 row-span-1" },
-  { label: "Actuación en vivo", src: gallery4, span: "col-span-2 row-span-1" },
-  { label: "En el escenario", src: gallery5, span: "col-span-1 row-span-1" },
+  { src: gallery1, span: "col-span-1 row-span-1" },
+  { src: gallery2, span: "col-span-1 row-span-2" },
+  { src: gallery3, span: "col-span-1 row-span-1" },
+  { src: gallery6, span: "col-span-2 row-span-1" },
+  { src: gallery4, span: "col-span-1 row-span-1" },
+  { src: gallery5, span: "col-span-1 row-span-1" },
 ];
 
 const GallerySection = () => {
@@ -45,15 +47,10 @@ const GallerySection = () => {
             >
               <img
                 src={item.src}
-                alt={item.label}
+                alt="Galería Grupo Valari"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-flamenco-black/30 group-hover:bg-flamenco-black/10 transition-colors duration-500" />
-              <div className="absolute inset-0 flex items-end p-4 md:p-6">
-                <p className="text-flamenco-ivory text-sm md:text-base font-medium opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                  {item.label}
-                </p>
-              </div>
+              <div className="absolute inset-0 bg-flamenco-black/20 group-hover:bg-flamenco-black/5 transition-colors duration-500" />
             </div>
           ))}
         </div>
@@ -67,13 +64,10 @@ const GallerySection = () => {
         >
           <img
             src={galleryItems[selectedImage].src}
-            alt={galleryItems[selectedImage].label}
+            alt="Galería Grupo Valari"
             className="max-w-[90vw] max-h-[85vh] object-contain rounded-xl shadow-2xl animate-scale-in"
             onClick={(e) => e.stopPropagation()}
           />
-          <p className="absolute bottom-8 text-flamenco-ivory text-lg font-medium tracking-wide">
-            {galleryItems[selectedImage].label}
-          </p>
         </div>
       )}
     </section>
