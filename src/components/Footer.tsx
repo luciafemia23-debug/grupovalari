@@ -16,11 +16,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <a href="tel:+34696780353" className="flex items-center gap-2 text-flamenco-ivory/60 hover:text-primary transition-colors">
-              <span>📞</span>
-              <span className="text-sm">696 780 353</span>
-            </a>
           <div className="text-right">
             <p className="font-serif text-lg text-flamenco-ivory/60">
               <span className="text-primary italic">Grupo Valari</span> — Asociación Ari Val Sar
