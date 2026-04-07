@@ -23,7 +23,7 @@ const EventsSection = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="w-[40%] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500">
+          <div className="w-[60%] md:w-[40%] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500">
             <img
               src={eventoFeria}
               alt="Feria de Abril - Verbena Gastrobar - Actuación Grupo Valari"
