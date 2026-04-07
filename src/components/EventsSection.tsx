@@ -22,8 +22,8 @@ const EventsSection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="max-w-2xl mx-auto">
-          <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500">
+        <div className="flex justify-center">
+          <div className="w-[40%] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500">
             <img
               src={eventoFeria}
               alt="Feria de Abril - Verbena Gastrobar - Actuación Grupo Valari"

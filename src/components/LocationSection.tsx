@@ -38,9 +38,9 @@ const LocationSection = () => {
           </div>
 
           {/* Redes sociales */}
-          <div className="flex justify-center gap-8 mt-12">
+          <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-8 mt-12">
             {[
-              { name: "Instagram", url: "https://instagram.com/grupo_valari" },
+              { name: "Instagram", url: "https://www.instagram.com/grupo_valari" },
               { name: "Facebook", url: "https://www.facebook.com/valari.arivalsar/" },
               { name: "YouTube", url: "https://www.youtube.com/@arivalsar-grupovalari-2607" },
               { name: "TikTok", url: "https://www.tiktok.com/@grupo_valari" },
