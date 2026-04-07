@@ -12,9 +12,12 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const subject = encodeURIComponent(`Contacto web de ${form.name}`);
+    const body = encodeURIComponent(`Nombre: ${form.name}\nEmail: ${form.email}\n\nMensaje:\n${form.message}`);
+    window.location.href = `mailto:byfemmia@gmail.com?subject=${subject}&body=${body}`;
     toast({
       title: "¡Mensaje enviado!",
-      description: "Te responderemos lo antes posible. ¡Gracias por tu interés!",
+      description: "Se abrirá tu aplicación de correo para enviar el mensaje.",
     });
     setForm({ name: "", email: "", message: "" });
   };
