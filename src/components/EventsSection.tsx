@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import eventoFeria from "@/assets/evento-feria-abril.jpg";
+import eventoMara from "@/assets/evento-feria-mara.jpg";
 
 const EventsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -22,11 +23,18 @@ const EventsSection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="flex justify-center">
-          <div className="w-[60%] md:w-[40%] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500">
             <img
               src={eventoFeria}
               alt="Feria de Abril - Verbena Gastrobar - Actuación Grupo Valari"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500">
+            <img
+              src={eventoMara}
+              alt="La Feria de Abril llega al Pabellón de Mara - Actuación Grupo Valari"
               className="w-full h-auto object-contain"
             />
           </div>
