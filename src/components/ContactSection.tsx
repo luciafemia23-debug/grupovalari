@@ -23,11 +23,10 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contacto" className="section-dark py-16 md:py-20 relative">
-      <div className="absolute inset-0 polka-pattern-light opacity-10" />
+    <section id="contacto" className="py-16 md:py-20 bg-flamenco-cream/30">
       <div
         ref={ref}
-        className={`container mx-auto px-6 relative z-10 transition-all duration-1000 ${
+        className={`container mx-auto px-6 transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
@@ -36,14 +35,14 @@ const ContactSection = () => {
             <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
               Da el primer paso
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-flamenco-ivory mb-6">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
               ¿Quieres tu espectáculo en vivo?
             </h2>
             <div className="brand-separator mb-6" />
-            <p className="text-flamenco-ivory/80 text-lg font-semibold mb-3">
+            <p className="text-foreground/80 text-lg font-semibold mb-3">
               Tipos de eventos
             </p>
-            <p className="text-flamenco-ivory/60 max-w-xl mx-auto">
+            <p className="text-muted-foreground max-w-xl mx-auto">
               Realizamos eventos privados, eventos en barrios y pueblos, ambientamos ferias… ¡y lo daremos todo! Déjanos tu nombre, tu email y descríbenos tu evento con día, tiempo de actuación que quieres y nosotras haremos magia en tu evento.
             </p>
           </div>
@@ -55,7 +54,7 @@ const ContactSection = () => {
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
-                className="bg-flamenco-ivory/5 border-primary/20 text-flamenco-ivory placeholder:text-flamenco-ivory/30 focus-visible:ring-primary/40 rounded-sm h-12"
+                className="bg-foreground/5 border-primary/20 text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-primary/40 rounded-sm h-12"
               />
             </div>
             <div>
@@ -65,7 +64,7 @@ const ContactSection = () => {
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
-                className="bg-flamenco-ivory/5 border-primary/20 text-flamenco-ivory placeholder:text-flamenco-ivory/30 focus-visible:ring-primary/40 rounded-sm h-12"
+                className="bg-foreground/5 border-primary/20 text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-primary/40 rounded-sm h-12"
               />
             </div>
             <div className="md:col-span-2">
@@ -75,7 +74,7 @@ const ContactSection = () => {
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 required
                 rows={5}
-                className="bg-flamenco-ivory/5 border-primary/20 text-flamenco-ivory placeholder:text-flamenco-ivory/30 focus-visible:ring-primary/40 rounded-sm resize-none"
+                className="bg-foreground/5 border-primary/20 text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-primary/40 rounded-sm resize-none"
               />
             </div>
             <div className="md:col-span-2 text-center">
@@ -87,13 +86,8 @@ const ContactSection = () => {
               </button>
             </div>
           </form>
-
-          
         </div>
       </div>
-
-
-
     </section>
   );
 };

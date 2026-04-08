@@ -53,7 +53,7 @@ const Navbar = () => {
             <li key={item.href}>
               <button
                 onClick={() => handleClick(item.href)}
-                className="text-flamenco-ivory/80 hover:text-primary text-sm font-medium tracking-wide uppercase transition-colors duration-300"
+                className="text-flamenco-ivory/80 hover:text-primary text-[0.7rem] font-medium tracking-wide uppercase transition-colors duration-300"
               >
                 {item.label}
               </button>
