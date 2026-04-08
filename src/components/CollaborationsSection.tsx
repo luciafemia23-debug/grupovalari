@@ -16,7 +16,7 @@ const CollaborationsSection = () => {
       >
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
-            Partners
+            Colaboraciones
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-flamenco-ivory mb-6">
             Pub Triana Zaragoza
@@ -34,14 +34,17 @@ const CollaborationsSection = () => {
           </div>
 
           <div className="max-w-md text-center md:text-left">
-            <p className="text-flamenco-ivory/80 mb-2">
-              Ubicación: C. de Contamina, 9, Casco Antiguo, 50003 Zaragoza
+            <p className="text-primary uppercase tracking-[0.2em] text-sm font-semibold mb-4">
+              Clases gratuitas con tu consumición
             </p>
             <p className="text-flamenco-ivory/80 mb-2">
-              Sevillanas y flamenco los jueves de 19:30 a 21:30
+              Sevillanas y flamenco
+            </p>
+            <p className="text-flamenco-ivory/80 mb-2">
+              Todos los jueves de 19:30 a 21:30
             </p>
             <p className="text-flamenco-ivory/80 mb-6">
-              Clases gratuitas con tu consumición
+              C. de Contamina, 9, Casco Antiguo, 50003 Zaragoza
             </p>
 
             <a

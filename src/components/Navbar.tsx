@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import logo from "@/assets/logo.png";
 
 const navItems = [
-  { label: "Inicio", href: "#hero" },
   { label: "Nuestra Historia", href: "#nosotros" },
   { label: "Clases", href: "#clases" },
   { label: "Galería", href: "#galeria" },
@@ -47,23 +46,10 @@ const Navbar = () => {
           </span>
         </button>
 
-        {/* Desktop */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <li key={item.href}>
-              <button
-                onClick={() => handleClick(item.href)}
-                className="text-flamenco-ivory/80 hover:text-primary text-[0.7rem] font-medium tracking-wide uppercase transition-colors duration-300"
-              >
-                {item.label}
-              </button>
-            </li>
-          ))}
-        </ul>
+        {/* Hamburger menu for all screens */}
 
-        {/* Mobile toggle */}
         <button
-          className="md:hidden text-flamenco-ivory"
+          className="text-flamenco-ivory"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menú"
         >
@@ -77,9 +63,8 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-flamenco-black/95 backdrop-blur-md border-t border-primary/20">
+        <div className="bg-flamenco-black/95 backdrop-blur-md border-t border-primary/20">
           <ul className="flex flex-col items-center py-4 gap-4">
             {navItems.map((item) => (
               <li key={item.href}>
