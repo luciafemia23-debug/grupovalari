@@ -9,17 +9,50 @@ const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Contacto web de ${form.name}`);
-    const body = encodeURIComponent(`Nombre: ${form.name}\nEmail: ${form.email}\n\nMensaje:\n${form.message}`);
-    window.location.href = `mailto:byfemmia@gmail.com?subject=${subject}&body=${body}`;
-    toast({
-      title: "¡Mensaje enviado!",
-      description: "Se abrirá tu aplicación de correo para enviar el mensaje.",
-    });
-    setForm({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      // Usamos Formspree para el envío automático
+      const formspreeId = import.meta.env.VITE_FORMSPREE_ID || "mzdkwywo";
+      
+      // Añadimos campos especiales de Formspree para mejor organización
+      const formData = {
+        ...form,
+        _subject: `Nuevo mensaje de ${form.name} desde la Web`,
+        _replyto: form.email,
+      };
+
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "¡Mensaje enviado con éxito!",
+          description: "Gracias por contactar con Grupo Valari. Te responderemos pronto.",
+        });
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        throw new Error("Respuesta no válida");
+      }
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Error al enviar",
+        description: "Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde o usa los correos directos.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -77,12 +110,18 @@ const ContactSection = () => {
                 className="bg-foreground/5 border-primary/20 text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-primary/40 rounded-sm resize-none"
               />
             </div>
+            {/* Campo honeypot para evitar spam (invisible para usuarios) */}
+            <input type="text" name="_gotcha" style={{ display: "none" }} />
+            
             <div className="md:col-span-2 text-center">
               <button
                 type="submit"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-sm uppercase tracking-widest font-semibold rounded-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
+                disabled={isSubmitting}
+                className={`bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-sm uppercase tracking-widest font-semibold rounded-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 ${
+                  isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+                }`}
               >
-                Enviar mensaje
+                {isSubmitting ? "Enviando..." : "Enviar mensaje"}
               </button>
             </div>
           </form>
