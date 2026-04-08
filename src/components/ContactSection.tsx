@@ -17,7 +17,7 @@ const ContactSection = () => {
 
     try {
       // Usamos Formspree para el envío automático
-      const formspreeId = import.meta.env.VITE_FORMSPREE_ID || "mzdkwywo";
+      const formspreeId = import.meta.env.VITE_FORMSPREE_ID || "xlgovzyj";
       
       // Añadimos campos especiales de Formspree para mejor organización
       const formData = {
