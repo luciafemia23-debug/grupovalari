@@ -1,5 +1,7 @@
 
 
+import heroBg from "@/assets/hero-bg.png";
+
 const HeroSection = () => {
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
@@ -10,8 +12,12 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background */}
+      {/* Background Layers */}
       <div className="absolute inset-0 bg-flamenco-black" />
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-40" 
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
