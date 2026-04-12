@@ -15,16 +15,16 @@ const HeroSection = () => {
       {/* Background Layers */}
       <div className="absolute inset-0 bg-flamenco-black" />
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-40" 
+        className="absolute inset-0 bg-cover bg-center opacity-20" 
         style={{ backgroundImage: `url(${heroBg})` }}
       />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <p className="text-primary uppercase tracking-[0.3em] text-base md:text-lg mb-6 animate-fade-in">
+        <p className="text-primary uppercase tracking-[0.3em] text-base md:text-lg mb-6 font-bold animate-fade-in">
           Asociación Ari Val Sar
         </p>
-        <p className="text-flamenco-ivory/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
+        <p className="text-flamenco-ivory/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
           Bienvenidos a nuestro rinconcito andaluz
         </p>
         <div className="flex justify-center animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
