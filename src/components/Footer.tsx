@@ -4,9 +4,9 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <div className="flex flex-col gap-2">
-            <a href="tel:+34696780353" className="flex items-center gap-2 text-flamenco-ivory/60 hover:text-primary transition-colors">
+            <a href="tel:+34696780311" className="flex items-center gap-2 text-flamenco-ivory/60 hover:text-primary transition-colors">
               <span>📞</span>
-              <span className="text-sm">696 780 353</span>
+              <span className="text-sm">696 780 311</span>
             </a>
             <div className="flex items-start gap-2 text-flamenco-ivory/60">
               <span>✉️</span>
