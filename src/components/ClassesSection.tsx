@@ -80,7 +80,7 @@ const ClassesSection = () => {
               <h3 className="font-serif text-2xl font-bold text-flamenco-ivory mb-4">
                 {item.title}
               </h3>
-              <p className="text-flamenco-ivory/60 text-sm leading-relaxed text-justify">
+              <p className="text-flamenco-ivory/60 text-sm leading-relaxed">
                 {item.description}
               </p>
             </div>
