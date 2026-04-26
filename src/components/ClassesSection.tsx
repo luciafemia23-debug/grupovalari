@@ -33,8 +33,12 @@ const classes = [
   },
   {
     title: "Grupo Infantil",
-    description:
-      "¿Te imaginas a tu peque moviendo los pies al ritmo del flamenco? Los sábados son mágicos para los más pequeños: risas, ritmo, y movimientos que despiertan la creatividad y la confianza mientras se inician en el mundo del flamenco, a partir de los 5 años.",
+    description: (
+      <>
+        ¿Te imaginas a tu peque moviendo los pies al ritmo del flamenco? Los sábados son mágicos para los más pequeños: risas, ritmo, y movimientos que despiertan la creatividad y la confianza mientras se inician en el mundo del flamenco.
+        <span className="block mt-2 font-bold text-primary/80">A partir de los 5 años.</span>
+      </>
+    ),
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -80,9 +84,9 @@ const ClassesSection = () => {
               <h3 className="font-serif text-2xl font-bold text-flamenco-ivory mb-4">
                 {item.title}
               </h3>
-              <p className="text-flamenco-ivory/60 text-sm leading-relaxed">
+              <div className="text-flamenco-ivory/60 text-sm leading-relaxed">
                 {item.description}
-              </p>
+              </div>
             </div>
           ))}
         </div>
