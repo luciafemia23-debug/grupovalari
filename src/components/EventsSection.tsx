@@ -1,5 +1,4 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import eventoMara from "@/assets/evento-feria-mara.jpg";
 
 const EventsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -22,13 +21,13 @@ const EventsSection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="max-w-xl mx-auto">
-          <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500">
-            <img
-              src={eventoMara}
-              alt="La Feria de Abril llega al Pabellón de Mara - Actuación Grupo Valari"
-              className="w-full h-auto object-contain"
-            />
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="bg-flamenco-cream/20 border border-primary/10 rounded-sm p-8">
+            <p className="text-foreground/60 italic text-lg">
+              No hay eventos programados en este momento. 
+              <br />
+              ¡Vuelve pronto para ver nuestras próximas actuaciones!
+            </p>
           </div>
         </div>
       </div>
