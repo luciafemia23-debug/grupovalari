@@ -1,10 +1,10 @@
+import { useState, useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -24,6 +24,18 @@ const galleryItems = [
 
 const GallerySection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   return (
     <section id="galeria" className="section-light py-24 md:py-32">
@@ -43,41 +55,72 @@ const GallerySection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="max-w-4xl mx-auto px-12">
+        <div className="max-w-6xl mx-auto overflow-visible">
           <Carousel
+            setApi={setApi}
             opts={{
-              align: "start",
+              align: "center",
               loop: true,
             }}
-            className="w-full relative"
+            className="w-full"
           >
-            <CarouselContent>
+            <CarouselContent className="-ml-4">
               {galleryItems.map((item, i) => (
-                <CarouselItem key={i} className="basis-full">
-                  <div className="p-1">
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] md:aspect-[16/9]">
+                <CarouselItem key={i} className="pl-4 basis-[85%] md:basis-[70%] lg:basis-[60%]">
+                  <div 
+                    className={`p-1 transition-all duration-500 ${
+                      current === i ? "opacity-100 scale-100" : "opacity-40 scale-95"
+                    }`}
+                    onClick={() => setSelectedImage(i)}
+                  >
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] md:aspect-[16/9] cursor-pointer group">
                       <img
                         src={item.src}
                         alt={`Galería Grupo Valari ${i + 1}`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-flamenco-black/30 to-transparent pointer-events-none" />
+                      <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="hidden md:block">
-              <CarouselPrevious className="-left-12 h-12 w-12 border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" />
-              <CarouselNext className="-right-12 h-12 w-12 border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" />
-            </div>
-            <div className="flex md:hidden justify-center mt-6 gap-4">
-              <CarouselPrevious className="static translate-y-0 h-10 w-10 border-primary/20" />
-              <CarouselNext className="static translate-y-0 h-10 w-10 border-primary/20" />
-            </div>
           </Carousel>
+          
+          <div className="flex justify-center mt-10 gap-2">
+            {galleryItems.map((_, i) => (
+              <button
+                key={i}
+                className={`h-1.5 transition-all duration-300 rounded-full ${
+                  current === i ? "w-8 bg-primary" : "w-2 bg-primary/20"
+                }`}
+                onClick={() => api?.scrollTo(i)}
+              />
+            ))}
+          </div>
         </div>
       </div>
+
+      {/* Lightbox / Fullscreen */}
+      {selectedImage !== null && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 animate-fade-in cursor-pointer"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button 
+            className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors text-4xl"
+            onClick={() => setSelectedImage(null)}
+          >
+            &times;
+          </button>
+          <img
+            src={galleryItems[selectedImage].src}
+            alt="Galería Grupo Valari"
+            className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-scale-in"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };
