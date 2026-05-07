@@ -38,13 +38,15 @@ const AboutSection = () => {
           </div>
 
           {/* Image */}
-          <div className="relative w-full max-w-md mx-auto md:ml-auto">
-            <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50">
-              <img 
-                src="/images/nuestra-historia.jpg" 
-                alt="Historia de Grupo Valari" 
-                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" 
-              />
+          <div className="flex items-center justify-center h-full">
+            <div className="relative w-full max-w-md mx-auto md:ml-auto">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50">
+                <img 
+                  src="/images/nuestra-historia.jpg" 
+                  alt="Historia de Grupo Valari" 
+                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" 
+                />
+              </div>
             </div>
           </div>
         </div>
