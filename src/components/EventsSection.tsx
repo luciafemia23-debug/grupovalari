@@ -21,13 +21,20 @@ const EventsSection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="bg-flamenco-cream/20 border border-primary/10 rounded-sm p-8">
-            <p className="text-foreground/60 italic text-lg">
-              No hay eventos programados en este momento. 
-              <br />
-              ¡Vuelve pronto para ver nuestras próximas actuaciones!
-            </p>
+        <div className="max-w-3xl mx-auto">
+          <div className="group relative overflow-hidden rounded-lg shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-primary/20">
+            <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500" />
+            <img 
+              src="/images/feria-abril-2026.jpg" 
+              alt="Feria de Abril 2026 - Lago Azul"
+              className="w-full h-auto object-cover"
+            />
+            <div className="absolute inset-0 border-2 border-primary/20 rounded-lg pointer-events-none group-hover:border-primary/40 transition-colors duration-500" />
+          </div>
+          <div className="mt-8 text-center">
+            <h3 className="font-serif text-2xl font-bold text-foreground mb-2">Feria de Abril 2026</h3>
+            <p className="text-foreground/80 mb-4">Lago Azul - Sábado 16 de Mayo, 12:00h</p>
+            <p className="text-primary font-semibold">¡Actuación del Grupo Valari!</p>
           </div>
         </div>
       </div>
