@@ -12,9 +12,9 @@ const AboutSection = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-start max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Text */}
-          <div>
+          <div className="mb-12">
             <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
               Nuestra historia
             </p>
@@ -45,9 +45,13 @@ const AboutSection = () => {
           </div>
 
           {/* Image */}
-          <div className="relative sticky top-32">
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <img src={aboutImage} alt="Miembros de Grupo Valari" className="w-full h-auto object-cover" />
+          <div className="relative max-w-3xl mx-auto">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50">
+              <img 
+                src="/images/nuestra-historia.jpg" 
+                alt="Historia de Grupo Valari" 
+                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" 
+              />
             </div>
           </div>
         </div>
