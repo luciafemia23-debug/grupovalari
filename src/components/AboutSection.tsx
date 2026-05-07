@@ -12,18 +12,19 @@ const AboutSection = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-center max-w-6xl mx-auto">
-          {/* Text */}
-          <div>
-            <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
-              Nuestra historia
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight text-left">
-              Más que baile,
-              <br />
-              <span className="italic">una forma de vivir</span>
-            </h2>
-            <div className="brand-separator mb-8 !mx-0" />
+        <div className="max-w-6xl mx-auto">
+          <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
+            Nuestra historia
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight text-left">
+            Más que baile,
+            <br />
+            <span className="italic">una forma de vivir</span>
+          </h2>
+          <div className="brand-separator mb-12 !mx-0" />
+
+          <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-stretch">
+            {/* Text Paragraphs */}
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed text-justify">
                 La Asociación Artística y Cultural Ari Val Sar, conocida como <strong>Grupo Valari</strong>, fue fundada en 2009 en Valdefierro (Zaragoza) con el objetivo de acercar el arte del flamenco a todas las personas. El grupo convierte el baile en una herramienta de expresión, comunidad y crecimiento personal, creando un espacio donde la pasión por la música y el movimiento se vive y se comparte cada día.
@@ -35,16 +36,16 @@ const AboutSection = () => {
                 Además de su actividad formativa, el grupo participa activamente en la vida cultural y social mediante actuaciones en barrios, pueblos, bodas y eventos especiales. Como asociación sin ánimo de lucro, Valari mantiene un ambiente abierto, cercano e inclusivo, donde lo más importante son las ganas de sentir y vivir la magia del flamenco.
               </p>
             </div>
-          </div>
 
-          {/* Image */}
-          <div className="h-full py-4">
-            <div className="relative h-full min-h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50">
-              <img 
-                src="/images/nuestra-historia.jpg" 
-                alt="Historia de Grupo Valari" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
-              />
+            {/* Image */}
+            <div className="relative h-full">
+              <div className="relative h-full min-h-[350px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50">
+                <img 
+                  src="/images/nuestra-historia.jpg" 
+                  alt="Historia de Grupo Valari" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                />
+              </div>
             </div>
           </div>
         </div>
