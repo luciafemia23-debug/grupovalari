@@ -66,20 +66,28 @@ const GallerySection = () => {
           >
             <CarouselContent className="-ml-4">
               {galleryItems.map((item, i) => (
-                <CarouselItem key={i} className="pl-4 basis-[85%] md:basis-[70%] lg:basis-[60%]">
+                <CarouselItem key={i} className="pl-4 basis-[80%] md:basis-[50%] lg:basis-[40%]">
                   <div 
-                    className={`p-1 transition-all duration-500 ${
-                      current === i ? "opacity-100 scale-100" : "opacity-40 scale-95"
+                    className={`p-2 transition-all duration-700 ${
+                      current === i ? "opacity-100 scale-105" : "opacity-40 scale-90"
                     }`}
-                    onClick={() => setSelectedImage(i)}
+                    onClick={() => {
+                      if (current === i) {
+                        setSelectedImage(i);
+                      } else {
+                        api?.scrollTo(i);
+                      }
+                    }}
                   >
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] md:aspect-[16/9] cursor-pointer group">
+                    <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-square cursor-pointer group border-4 border-white/10">
                       <img
                         src={item.src}
                         alt={`Galería Grupo Valari ${i + 1}`}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                      <div className={`absolute inset-0 transition-colors duration-500 ${
+                        current === i ? "bg-black/0" : "bg-black/20"
+                      }`} />
                     </div>
                   </div>
                 </CarouselItem>
