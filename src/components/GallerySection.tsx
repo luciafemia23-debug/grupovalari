@@ -1,5 +1,11 @@
-import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -18,7 +24,6 @@ const galleryItems = [
 
 const GallerySection = () => {
   const { ref, isVisible } = useScrollAnimation();
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
     <section id="galeria" className="section-light py-24 md:py-32">
@@ -38,38 +43,41 @@ const GallerySection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="grid grid-cols-2 gap-3 md:gap-4 max-w-4xl mx-auto">
-          {galleryItems.map((item, i) => (
-            <div
-              key={i}
-              className="group relative rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-500 aspect-[4/3]"
-              onClick={() => setSelectedImage(i)}
-            >
-              <img
-                src={item.src}
-                alt="Galería Grupo Valari"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-flamenco-black/20 group-hover:bg-flamenco-black/5 transition-colors duration-500" />
+        <div className="max-w-4xl mx-auto px-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full relative"
+          >
+            <CarouselContent>
+              {galleryItems.map((item, i) => (
+                <CarouselItem key={i} className="basis-full">
+                  <div className="p-1">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] md:aspect-[16/9]">
+                      <img
+                        src={item.src}
+                        alt={`Galería Grupo Valari ${i + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-flamenco-black/30 to-transparent pointer-events-none" />
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden md:block">
+              <CarouselPrevious className="-left-12 h-12 w-12 border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" />
+              <CarouselNext className="-right-12 h-12 w-12 border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" />
             </div>
-          ))}
+            <div className="flex md:hidden justify-center mt-6 gap-4">
+              <CarouselPrevious className="static translate-y-0 h-10 w-10 border-primary/20" />
+              <CarouselNext className="static translate-y-0 h-10 w-10 border-primary/20" />
+            </div>
+          </Carousel>
         </div>
       </div>
-
-      {/* Lightbox */}
-      {selectedImage !== null && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-flamenco-black/85 backdrop-blur-sm animate-fade-in cursor-pointer"
-          onClick={() => setSelectedImage(null)}
-        >
-          <img
-            src={galleryItems[selectedImage].src}
-            alt="Galería Grupo Valari"
-            className="max-w-[90vw] max-h-[85vh] object-contain rounded-xl shadow-2xl animate-scale-in"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
     </section>
   );
 };
