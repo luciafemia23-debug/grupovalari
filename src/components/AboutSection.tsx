@@ -38,7 +38,7 @@ const AboutSection = () => {
           </div>
 
           {/* Image */}
-          <div className="flex items-center justify-center h-full">
+          <div className="flex items-center justify-center h-full md:mt-24">
             <div className="relative w-full max-w-md mx-auto md:ml-auto">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50">
                 <img 
