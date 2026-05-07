@@ -36,7 +36,7 @@ const AboutSection = () => {
           </div>
 
           {/* Image */}
-          <div className="relative max-w-3xl mx-auto">
+          <div className="relative max-w-xl mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50">
               <img 
                 src="/images/nuestra-historia.jpg" 
