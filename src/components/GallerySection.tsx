@@ -77,7 +77,7 @@ const GallerySection = () => {
                       }
                     }}
                   >
-                    <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-square cursor-pointer group border-4 border-white/10">
+                    <div className="relative rounded-[2rem] overflow-hidden aspect-square cursor-pointer group border-4 border-white/10">
                       <img
                         src={item.src}
                         alt={`Galería Grupo Valari ${i + 1}`}
