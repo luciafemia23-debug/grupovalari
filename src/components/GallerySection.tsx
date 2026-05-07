@@ -79,7 +79,7 @@ const GallerySection = () => {
                       }
                     }}
                   >
-                    <div className="relative rounded-[2rem] overflow-hidden aspect-square cursor-pointer group border-[7px] border-primary">
+                    <div className="relative rounded-[2rem] overflow-hidden aspect-square cursor-pointer group border-[1.5mm] border-primary">
                       <img
                         src={item.src}
                         alt={`Galería Grupo Valari ${i + 1}`}
