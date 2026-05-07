@@ -62,12 +62,12 @@ const GallerySection = () => {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-4 py-10">
               {galleryItems.map((item, i) => (
                 <CarouselItem key={i} className="pl-4 basis-[80%] md:basis-[50%] lg:basis-[40%]">
                   <div 
-                    className={`p-2 transition-all duration-700 ${
-                      current === i ? "opacity-100 scale-105" : "opacity-40 scale-90"
+                    className={`p-4 transition-all duration-700 ${
+                      current === i ? "opacity-100 scale-[0.95]" : "opacity-40 scale-[0.85]"
                     }`}
                     onClick={() => {
                       if (current === i) {
