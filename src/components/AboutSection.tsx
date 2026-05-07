@@ -12,9 +12,20 @@ const AboutSection = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 items-center max-w-6xl mx-auto">
+          {/* Image */}
+          <div className="relative w-full max-w-md mx-auto md:mr-auto order-2 md:order-1">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50">
+              <img 
+                src="/images/nuestra-historia.jpg" 
+                alt="Historia de Grupo Valari" 
+                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" 
+              />
+            </div>
+          </div>
+
           {/* Text */}
-          <div>
+          <div className="order-1 md:order-2">
             <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
               Nuestra historia
             </p>
@@ -34,17 +45,6 @@ const AboutSection = () => {
               <p className="text-muted-foreground leading-relaxed text-justify">
                 Además de su actividad formativa, el grupo participa activamente en la vida cultural y social mediante actuaciones en barrios, pueblos, bodas y eventos especiales. Como asociación sin ánimo de lucro, Valari mantiene un ambiente abierto, cercano e inclusivo, donde lo más importante son las ganas de sentir y vivir la magia del flamenco.
               </p>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="relative w-full max-w-md mx-auto md:ml-auto">
-            <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50">
-              <img 
-                src="/images/nuestra-historia.jpg" 
-                alt="Historia de Grupo Valari" 
-                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" 
-              />
             </div>
           </div>
         </div>
