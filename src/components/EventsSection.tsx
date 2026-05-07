@@ -21,7 +21,7 @@ const EventsSection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <div className="group relative overflow-hidden rounded-lg shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-primary/20">
             <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500" />
             <img 
