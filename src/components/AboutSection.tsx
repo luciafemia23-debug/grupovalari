@@ -12,7 +12,7 @@ const AboutSection = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <p className="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
             Nuestra historia
           </p>
@@ -23,7 +23,7 @@ const AboutSection = () => {
           </h2>
           <div className="brand-separator mb-12 !mx-0" />
 
-          <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-stretch">
+          <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 items-stretch">
             {/* Text Paragraphs */}
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed text-justify">
