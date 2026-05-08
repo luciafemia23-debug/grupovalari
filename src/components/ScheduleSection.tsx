@@ -11,7 +11,6 @@ const schedule = [
   {
     day: "Miércoles",
     classes: [
-      { name: "Iniciación de flamenco", time: "18:00 – 19:30", place: "Sala parroquial Ntra. Sra. de Lourdes", prof: "Silvia Femia" },
       { name: "Iniciación de sevillanas", time: "19:00 – 20:30", place: "Sala parroquial Ntra. Sra. de Lourdes", prof: "Silvia Femia" },
     ],
   },
