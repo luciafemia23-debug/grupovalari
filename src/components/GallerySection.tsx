@@ -11,7 +11,7 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
-import gallery7 from "@/assets/gallery-7.jpg";
+import gallery1 from "@/assets/gallery-1.jpg";
 
 const galleryItems = [
   { src: gallery2 },
@@ -19,7 +19,7 @@ const galleryItems = [
   { src: gallery6 },
   { src: gallery4 },
   { src: gallery5 },
-  { src: gallery7 },
+  { src: gallery1 },
 ];
 
 const GallerySection = () => {
