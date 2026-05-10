@@ -105,7 +105,7 @@ const GallerySection = () => {
               />
             ))}
           </div>
-          <p className="text-center text-red-500 mt-6 font-medium">
+          <p className="text-center text-red-600 mt-6 font-semibold uppercase tracking-widest text-sm">
             Para ampliar, ¡dale click a la foto!
           </p>
         </div>
