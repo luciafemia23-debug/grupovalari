@@ -1,6 +1,5 @@
 
 
-import heroBg from "@/assets/hero-bg.png";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
@@ -15,8 +14,8 @@ const HeroSection = () => {
       {/* Background Layers */}
       <div className="absolute inset-0 bg-flamenco-black" />
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-20" 
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="absolute inset-0 bg-cover bg-center opacity-40" 
+        style={{ backgroundImage: `url('/images/inicio.jpeg')` }}
       />
 
       {/* Content */}
