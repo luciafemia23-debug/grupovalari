@@ -94,7 +94,10 @@ const GallerySection = () => {
             </CarouselContent>
           </Carousel>
           
-          <div className="flex justify-center mt-10 gap-2">
+          <p className="text-center text-red-600 mt-10 mb-6 font-semibold uppercase tracking-widest text-sm">
+            Para ampliar, ¡dale click a la foto!
+          </p>
+          <div className="flex justify-center gap-2">
             {galleryItems.map((_, i) => (
               <button
                 key={i}
@@ -105,9 +108,6 @@ const GallerySection = () => {
               />
             ))}
           </div>
-          <p className="text-center text-red-600 mt-6 font-semibold uppercase tracking-widest text-sm">
-            Para ampliar, ¡dale click a la foto!
-          </p>
         </div>
       </div>
 
