@@ -73,7 +73,7 @@ const ContactSection = () => {
             </h2>
             <div className="brand-separator mb-6" />
             <p className="text-muted-foreground max-w-xl mx-auto text-balance">
-              Déjanos tus datos y descríbe el evento que quieres con día, lugar y tiempo. Nosotras haremos magia en tu evento. Te responderemos lo antes posible.
+              Déjanos tus datos y descríbe el evento que quieres con día, lugar y tiempo. Te responderemos lo antes posible.
             </p>
           </div>
 
