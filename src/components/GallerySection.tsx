@@ -19,6 +19,7 @@ const galleryItems = [
   { src: gallery6 },
   { src: gallery4 },
   { src: gallery5 },
+  { src: gallery1 },
 ];
 
 const GallerySection = () => {
