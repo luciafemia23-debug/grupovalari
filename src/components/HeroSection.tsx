@@ -14,7 +14,7 @@ const HeroSection = () => {
       {/* Background Layers */}
       <div className="absolute inset-0 bg-flamenco-black" />
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-40" 
+        className="absolute inset-0 bg-cover bg-center opacity-30" 
         style={{ backgroundImage: `url('/images/inicio.jpeg')` }}
       />
 
