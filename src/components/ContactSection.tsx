@@ -72,8 +72,11 @@ const ContactSection = () => {
               ¿Quieres tu espectáculo en vivo?
             </h2>
             <div className="brand-separator mb-6" />
+            <p className="text-muted-foreground max-w-xl mx-auto mb-4">
+              Déjanos tus datos y descríbenos el evento que quieres con día, lugar y tiempo.
+            </p>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Déjanos tus datos y descríbenos tu evento con día, tiempo de actuación que quieres y nosotras haremos magia en tu evento.
+              Nosotras haremos magia en tu evento. Te responderemos lo antes posible.
             </p>
           </div>
 
