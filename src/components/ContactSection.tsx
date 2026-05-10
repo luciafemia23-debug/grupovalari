@@ -72,11 +72,8 @@ const ContactSection = () => {
               ¿Quieres tu espectáculo en vivo?
             </h2>
             <div className="brand-separator mb-6" />
-            <p className="text-foreground/80 text-lg font-semibold mb-3">
-              Tipos de eventos
-            </p>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Realizamos eventos privados, eventos en barrios y pueblos, ambientamos ferias… ¡y lo daremos todo! Déjanos tu nombre, tu email y descríbenos tu evento con día, tiempo de actuación que quieres y nosotras haremos magia en tu evento.
+              Déjanos tus datos y descríbenos tu evento con día, tiempo de actuación que quieres y nosotras haremos magia en tu evento.
             </p>
           </div>
 
