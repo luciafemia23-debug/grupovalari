@@ -21,10 +21,10 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <h1 className="font-serif text-4xl md:text-5xl font-bold text-flamenco-ivory mb-6 animate-fade-in">
-          Asociación Ari Val Sar
+          Asociación <br className="md:hidden" /> Ari Val Sar
         </h1>
         <p className="text-flamenco-ivory/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
-          Bienvenidos a nuestro rinconcito andaluz
+          Bienvenidos a nuestro <br className="md:hidden" /> rinconcito andaluz
         </p>
         <div className="flex justify-center animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
           <button
