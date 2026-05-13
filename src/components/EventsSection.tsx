@@ -35,10 +35,19 @@ const EventsSection = () => {
   useEffect(() => {
     if (!api) return;
 
-    setCurrent(api.selectedScrollSnap());
-    api.on("select", () => {
+    const onSelect = () => {
       setCurrent(api.selectedScrollSnap());
-    });
+    };
+
+    api.on("select", onSelect);
+    api.on("reInit", onSelect);
+    
+    onSelect();
+
+    return () => {
+      api.off("select", onSelect);
+      api.off("reInit", onSelect);
+    };
   }, [api]);
 
   return (
@@ -59,29 +68,23 @@ const EventsSection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="max-w-6xl mx-auto overflow-visible">
+        <div className="max-w-5xl mx-auto overflow-visible">
           <Carousel
             setApi={setApi}
             opts={{
               align: "center",
-              loop: true,
+              loop: false,
             }}
             className="w-full"
           >
             <CarouselContent className="-ml-4 py-4">
               {events.map((event, i) => (
-                <CarouselItem key={event.id} className="pl-4 basis-[85%] md:basis-[50%] lg:basis-[40%]">
+                <CarouselItem key={event.id} className="pl-4 basis-[85%] md:basis-[50%] lg:basis-[45%]">
                   <div 
                     className={`transition-all duration-700 cursor-pointer ${
                       current === i ? "opacity-100 scale-100" : "opacity-40 scale-90"
                     }`}
-                    onClick={() => {
-                      if (current === i) {
-                        setSelectedImage(i);
-                      } else {
-                        api?.scrollTo(i);
-                      }
-                    }}
+                    onClick={() => api?.scrollTo(i)}
                   >
                     <div className="group relative overflow-hidden rounded-lg shadow-xl transition-all duration-500 hover:shadow-primary/10">
                       <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500" />
@@ -90,6 +93,12 @@ const EventsSection = () => {
                           src={event.image} 
                           alt={event.title}
                           className="w-full h-full object-contain p-1"
+                          onClick={(e) => {
+                            if (current === i) {
+                              e.stopPropagation();
+                              setSelectedImage(i);
+                            }
+                          }}
                         />
                       </div>
                       <div className={`absolute inset-0 border border-primary/10 rounded-lg pointer-events-none group-hover:border-primary/30 transition-colors duration-500 ${current === i ? "opacity-100" : "opacity-0"}`} />
