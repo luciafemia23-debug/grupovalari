@@ -68,70 +68,39 @@ const EventsSection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="max-w-4xl mx-auto overflow-visible">
-          <Carousel
-            setApi={setApi}
-            opts={{
-              align: "center",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-4 py-4">
-              {events.map((event, i) => (
-                <CarouselItem key={event.id} className="pl-4 basis-full md:basis-[80%]">
-                  <div 
-                    className={`transition-all duration-700 cursor-pointer ${
-                      current === i ? "opacity-100 scale-100" : "opacity-40 scale-90"
-                    }`}
-                    onClick={() => api?.scrollTo(i)}
-                  >
-                    <div className="group relative overflow-hidden rounded-lg shadow-xl transition-all duration-500 hover:shadow-primary/10">
-                      <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500" />
-                      <div className="aspect-[3/4] w-full flex items-center justify-center bg-muted/20">
-                        <img 
-                          src={event.image} 
-                          alt={event.title}
-                          className="w-full h-full object-contain p-1"
-                          onClick={(e) => {
-                            if (current === i) {
-                              e.stopPropagation();
-                              setSelectedImage(i);
-                            }
-                          }}
-                        />
-                      </div>
-                      <div className={`absolute inset-0 border border-primary/10 rounded-lg pointer-events-none group-hover:border-primary/30 transition-colors duration-500 ${current === i ? "opacity-100" : "opacity-0"}`} />
-                    </div>
-                    
-                    <div className={`mt-6 text-center transition-all duration-500 ${current === i ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-                      <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mb-1">{event.title}</h3>
-                      <p className="text-foreground/70 text-sm mb-1">{event.date}</p>
-                      <p className="text-foreground/50 text-xs mb-2">{event.location}</p>
-                      <p className="text-primary font-semibold uppercase tracking-wider text-[10px] md:text-xs">{event.description}</p>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-
-          <p className="text-center text-primary/60 mt-6 mb-6 font-medium uppercase tracking-widest text-[10px] md:text-xs">
-            Haz clic en el cartel para ampliar
-          </p>
-
-          <div className="flex justify-center gap-2">
-            {events.map((_, i) => (
-              <button
-                key={i}
-                className={`h-1.5 transition-all duration-300 rounded-full ${
-                  current === i ? "w-8 bg-primary" : "w-2 bg-primary/20"
-                }`}
-                onClick={() => api?.scrollTo(i)}
-              />
-            ))}
-          </div>
+        <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          {events.map((event, i) => (
+            <div 
+              key={event.id}
+              className="flex flex-col items-center"
+            >
+              <div 
+                className="relative overflow-hidden rounded-lg shadow-xl cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+                onClick={() => setSelectedImage(i)}
+              >
+                <div className="aspect-[3/4] w-full flex items-center justify-center bg-muted/20">
+                  <img 
+                    src={event.image} 
+                    alt={event.title}
+                    className="w-full h-full object-contain p-1"
+                  />
+                </div>
+                <div className="absolute inset-0 border border-primary/10 rounded-lg pointer-events-none" />
+              </div>
+              
+              <div className="mt-8 text-center">
+                <h3 className="font-serif text-2xl font-bold text-foreground mb-2">{event.title}</h3>
+                <p className="text-foreground/70 mb-2">{event.date}</p>
+                <p className="text-foreground/50 text-sm mb-3">{event.location}</p>
+                <p className="text-primary font-semibold uppercase tracking-wider text-sm">{event.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
+
+        <p className="text-center text-primary/60 mt-12 mb-6 font-medium uppercase tracking-widest text-xs">
+          Haz clic en el cartel para ampliar
+        </p>
       </div>
 
       {/* Lightbox */}
