@@ -22,7 +22,7 @@ const events = [
     date: "Domingo 31 de Mayo",
     location: "Salón del Centro Cívico, Valdefierro",
     description: "Masterclass (11:00) y Festival (17:30)",
-    image: "/images/jornada-valari.jpg",
+    image: "/images/jornada valari.jpg",
   },
 ];
 
