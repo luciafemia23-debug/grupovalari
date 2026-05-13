@@ -73,13 +73,13 @@ const EventsSection = () => {
             setApi={setApi}
             opts={{
               align: "center",
-              loop: false,
+              loop: true,
             }}
             className="w-full"
           >
             <CarouselContent className="-ml-4 py-4">
               {events.map((event, i) => (
-                <CarouselItem key={event.id} className="pl-4 basis-[90%] md:basis-[75%] lg:basis-[65%]">
+                <CarouselItem key={event.id} className="pl-4 basis-[90%] md:basis-[80%] lg:basis-[70%]">
                   <div 
                     className={`transition-all duration-700 cursor-pointer ${
                       current === i ? "opacity-100 scale-100" : "opacity-40 scale-90"
