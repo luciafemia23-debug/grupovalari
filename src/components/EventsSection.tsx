@@ -68,7 +68,7 @@ const EventsSection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="max-w-6xl mx-auto overflow-visible">
+        <div className="max-w-4xl mx-auto overflow-visible">
           <Carousel
             setApi={setApi}
             opts={{
@@ -79,7 +79,7 @@ const EventsSection = () => {
           >
             <CarouselContent className="-ml-4 py-4">
               {events.map((event, i) => (
-                <CarouselItem key={event.id} className="pl-4 basis-[90%] md:basis-[80%] lg:basis-[70%]">
+                <CarouselItem key={event.id} className="pl-4 basis-full md:basis-[80%]">
                   <div 
                     className={`transition-all duration-700 cursor-pointer ${
                       current === i ? "opacity-100 scale-100" : "opacity-40 scale-90"
