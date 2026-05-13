@@ -88,7 +88,7 @@ const EventsSection = () => {
                       <img 
                         src={event.image} 
                         alt={event.title}
-                        className="w-full h-auto object-cover aspect-[4/5] md:aspect-video lg:aspect-[16/10]"
+                        className="w-full h-auto"
                       />
                       <div className={`absolute inset-0 border-2 border-primary/20 rounded-lg pointer-events-none group-hover:border-primary/40 transition-colors duration-500 ${current === i ? "opacity-100" : "opacity-0"}`} />
                     </div>
