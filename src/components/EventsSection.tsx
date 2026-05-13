@@ -70,7 +70,7 @@ const EventsSection = () => {
           >
             <CarouselContent className="-ml-4 py-4">
               {events.map((event, i) => (
-                <CarouselItem key={event.id} className="pl-4 basis-[90%] md:basis-[70%] lg:basis-[60%]">
+                <CarouselItem key={event.id} className="pl-4 basis-[85%] md:basis-[50%] lg:basis-[40%]">
                   <div 
                     className={`transition-all duration-700 cursor-pointer ${
                       current === i ? "opacity-100 scale-100" : "opacity-40 scale-90"
@@ -83,21 +83,23 @@ const EventsSection = () => {
                       }
                     }}
                   >
-                    <div className="group relative overflow-hidden rounded-lg shadow-2xl transition-all duration-500 hover:shadow-primary/20">
+                    <div className="group relative overflow-hidden rounded-lg shadow-xl transition-all duration-500 hover:shadow-primary/10">
                       <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500" />
-                      <img 
-                        src={event.image} 
-                        alt={event.title}
-                        className="w-full h-auto"
-                      />
-                      <div className={`absolute inset-0 border-2 border-primary/20 rounded-lg pointer-events-none group-hover:border-primary/40 transition-colors duration-500 ${current === i ? "opacity-100" : "opacity-0"}`} />
+                      <div className="aspect-[3/4] w-full flex items-center justify-center bg-muted/20">
+                        <img 
+                          src={event.image} 
+                          alt={event.title}
+                          className="w-full h-full object-contain p-1"
+                        />
+                      </div>
+                      <div className={`absolute inset-0 border border-primary/10 rounded-lg pointer-events-none group-hover:border-primary/30 transition-colors duration-500 ${current === i ? "opacity-100" : "opacity-0"}`} />
                     </div>
                     
-                    <div className={`mt-8 text-center transition-all duration-500 ${current === i ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-                      <h3 className="font-serif text-2xl font-bold text-foreground mb-2">{event.title}</h3>
-                      <p className="text-foreground/80 mb-2">{event.date}</p>
-                      <p className="text-foreground/60 text-sm mb-3">{event.location}</p>
-                      <p className="text-primary font-semibold uppercase tracking-wider text-sm">{event.description}</p>
+                    <div className={`mt-6 text-center transition-all duration-500 ${current === i ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+                      <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mb-1">{event.title}</h3>
+                      <p className="text-foreground/70 text-sm mb-1">{event.date}</p>
+                      <p className="text-foreground/50 text-xs mb-2">{event.location}</p>
+                      <p className="text-primary font-semibold uppercase tracking-wider text-[10px] md:text-xs">{event.description}</p>
                     </div>
                   </div>
                 </CarouselItem>
