@@ -35,7 +35,7 @@ const classes = [
     title: "Grupo Infantil",
     description: (
       <>
-        ¿Te imaginas a tu peque moviendo los pies al ritmo del flamenco? Los sábados son mágicos para los más pequeños: risas, ritmo, y movimientos que despiertan la creatividad y la confianza mientras se inician en el mundo del flamenco.
+        Iniciación al mundo del flamenco entre risas, ritmo y movimientos que despiertan la creatividad y la confianza.
         <span className="block mt-2 font-bold text-primary/80">A partir de los 5 años.</span>
       </>
     ),
