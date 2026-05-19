@@ -9,14 +9,6 @@ import {
 
 const events = [
   {
-    id: 1,
-    title: "Feria de Abril 2026",
-    date: "Sábado 16 de Mayo, 12:00h",
-    location: "Lago Azul",
-    description: "¡Actuación del Grupo Valari!",
-    image: "/images/feria-abril-2026.jpg",
-  },
-  {
     id: 2,
     title: "IV Jornada Valari",
     date: "Domingo 31 de Mayo",
@@ -68,7 +60,7 @@ const EventsSection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 gap-12 max-w-md mx-auto">
           {events.map((event, i) => (
             <div 
               key={event.id}
