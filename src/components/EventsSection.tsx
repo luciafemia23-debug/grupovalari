@@ -7,16 +7,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-const events = [
-  {
-    id: 2,
-    title: "IV Jornada Valari",
-    date: "Domingo 31 de Mayo",
-    location: "Salón del Centro Cívico, Valdefierro",
-    description: "Masterclass (11:00) y Festival (17:30)",
-    image: "/images/jornada valari.jpg",
-  },
-];
+const events = [];
 
 const EventsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -60,39 +51,47 @@ const EventsSection = () => {
           <div className="brand-separator mb-6" />
         </div>
 
-        <div className="grid grid-cols-1 gap-12 max-w-md mx-auto">
-          {events.map((event, i) => (
-            <div 
-              key={event.id}
-              className="flex flex-col items-center"
-            >
-              <div 
-                className="relative overflow-hidden rounded-lg shadow-xl cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
-                onClick={() => setSelectedImage(i)}
-              >
-                <div className="aspect-[3/4] w-full flex items-center justify-center bg-muted/20">
-                  <img 
-                    src={event.image} 
-                    alt={event.title}
-                    className="w-full h-full object-contain p-1"
-                  />
+        {events.length > 0 ? (
+          <>
+            <div className="grid grid-cols-1 gap-12 max-w-md mx-auto">
+              {events.map((event, i) => (
+                <div 
+                  key={event.id}
+                  className="flex flex-col items-center"
+                >
+                  <div 
+                    className="relative overflow-hidden rounded-lg shadow-xl cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+                    onClick={() => setSelectedImage(i)}
+                  >
+                    <div className="aspect-[3/4] w-full flex items-center justify-center bg-muted/20">
+                      <img 
+                        src={event.image} 
+                        alt={event.title}
+                        className="w-full h-full object-contain p-1"
+                      />
+                    </div>
+                    <div className="absolute inset-0 border border-primary/10 rounded-lg pointer-events-none" />
+                  </div>
+                  
+                  <div className="mt-8 text-center">
+                    <h3 className="font-serif text-2xl font-bold text-foreground mb-2">{event.title}</h3>
+                    <p className="text-foreground/70 mb-2">{event.date}</p>
+                    <p className="text-foreground/50 text-sm mb-3">{event.location}</p>
+                    <p className="text-primary font-semibold uppercase tracking-wider text-sm">{event.description}</p>
+                  </div>
                 </div>
-                <div className="absolute inset-0 border border-primary/10 rounded-lg pointer-events-none" />
-              </div>
-              
-              <div className="mt-8 text-center">
-                <h3 className="font-serif text-2xl font-bold text-foreground mb-2">{event.title}</h3>
-                <p className="text-foreground/70 mb-2">{event.date}</p>
-                <p className="text-foreground/50 text-sm mb-3">{event.location}</p>
-                <p className="text-primary font-semibold uppercase tracking-wider text-sm">{event.description}</p>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        <p className="text-center text-primary/60 mt-12 mb-6 font-medium uppercase tracking-widest text-xs">
-          Haz clic en el cartel para ampliar
-        </p>
+            <p className="text-center text-primary/60 mt-12 mb-6 font-medium uppercase tracking-widest text-xs">
+              Haz clic en el cartel para ampliar
+            </p>
+          </>
+        ) : (
+          <div className="text-center py-8">
+            <p className="text-foreground/50 italic">No hay eventos próximos programados en este momento.</p>
+          </div>
+        )}
       </div>
 
       {/* Lightbox */}

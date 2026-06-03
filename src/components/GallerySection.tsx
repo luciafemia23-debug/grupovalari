@@ -19,6 +19,7 @@ const galleryItems = [
   { src: gallery4 },
   { src: gallery5 },
   { src: "/images/evento gastrobar.jpeg" },
+  { src: "/images/final de curso 2026.jpeg" },
 ];
 
 const GallerySection = () => {
