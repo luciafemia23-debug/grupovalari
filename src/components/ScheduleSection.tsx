@@ -4,28 +4,27 @@ const schedule = [
   {
     day: "Martes",
     classes: [
-      { name: "Flamenco nivel medio", time: "10:30 – 12:00", place: "Centro Cívico Valdefierro", prof: "Sylvia Valle y Silvia Arilla" },
-      { name: "Palillos flamencos", time: "17:30 – 19:00", place: "Sala parroquial Ntra. Sra. de Lourdes", prof: "Ana Zambrano" },
+      { name: "Flamenco nivel medio", time: "10:30 - 12:00", place: "Centro cívico Valdefierro", prof: "Sylvia Valle y Silvia Arilla" },
     ],
   },
   {
     day: "Miércoles",
     classes: [
-      { name: "Iniciación de sevillanas", time: "19:00 - 20:30", place: "Sala parroquial Ntra. Sra. de Lourdes", prof: "Silvia Femia" },
+      { name: "Actividades varias a concretar durante el curso", time: "17:30 - 19:00", place: "Sala parroquial Valdefierro", prof: "Sylvia Valle" },
+      { name: "Perfeccionamiento sevillanas", time: "19:00 - 20:30", place: "Sala parroquial Valdefierro", prof: "Silvia Femia" },
     ],
   },
   {
     day: "Viernes",
     classes: [
-      { name: "Perfeccionamiento de sevillanas", time: "10:30 – 12:00", place: "Centro Cívico Valdefierro", prof: "Sylvia Valle y Silvia Arilla" },
+      { name: "Toque de castañuelas y aplicación al folclore andaluz", time: "10:30 - 12:00", place: "Centro cívico Valdefierro", prof: "Sylvia Valle" },
     ],
   },
   {
     day: "Sábado",
     classes: [
-      { name: "Grupo estable", time: "10:00 – 12:00", place: "Centro Cívico Valdefierro", prof: "Sylvia Valle y Verónica Hidalgo" },
-      { name: "Palillos flamencos", time: "12:00 – 13:30", place: "Sala parroquial Ntra. Sra. de Lourdes", prof: "Ana Zambrano" },
-      { name: "Grupo infantil", time: "12:00 – 13:00", place: "Centro Cívico Valdefierro", prof: "Sylvia Valle y Verónica Hidalgo" },
+      { name: "Ensayo grupo estable", time: "10:00 - 12:00", place: "Centro cívico Valdefierro", prof: "Sylvia Valle" },
+      { name: "Folclore y flamenco infantil", time: "12:00 - 13:00", place: "Centro cívico Valdefierro", prof: "Sylvia Valle" },
     ],
   },
 ];
@@ -47,7 +46,7 @@ const ScheduleSection = () => {
             Horario
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-flamenco-ivory mb-4">
-            Horario de clases
+            Horarios curso 26/27
           </h2>
           <div className="brand-separator mb-6" />
         </div>
