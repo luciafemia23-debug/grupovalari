@@ -46,7 +46,7 @@ const ScheduleSection = () => {
             Horario
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-flamenco-ivory mb-4">
-            Horarios curso 26/27
+            Curso 26/27
           </h2>
           <div className="brand-separator mb-6" />
         </div>
