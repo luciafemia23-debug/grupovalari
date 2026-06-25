@@ -17,7 +17,7 @@ const schedule = [
   {
     day: "Viernes",
     classes: [
-      { name: "Toque de castañuelas y aplicación al folclore andaluz", time: "10:30 - 12:00", place: "Centro cívico Valdefierro", prof: "Sylvia Valle" },
+      { name: "Palillos flamencos aplicados al folclore andaluz", time: "10:30 - 12:00", place: "Centro cívico Valdefierro", prof: "Sylvia Valle" },
     ],
   },
   {
