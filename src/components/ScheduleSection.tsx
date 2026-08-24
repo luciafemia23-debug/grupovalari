@@ -4,27 +4,27 @@ const schedule = [
   {
     day: "Martes",
     classes: [
-      { name: "Flamenco nivel medio", time: "10:30 - 12:00", place: "Centro cívico Valdefierro", prof: "Sylvia Valle y Silvia Arilla" },
+      { name: "Flamenco nivel medio", time: "10:30 - 12:00", place: "Centro cívico Valdefierro" },
     ],
   },
   {
     day: "Miércoles",
     classes: [
-      { name: "Actividades varias a concretar durante el curso", time: "17:30 - 19:00", place: "Sala parroquial Valdefierro", prof: "Sylvia Valle" },
-      { name: "Perfeccionamiento sevillanas", time: "19:00 - 20:30", place: "Sala parroquial Valdefierro", prof: "Silvia Femia" },
+      { name: "Actividades varias a concretar durante el curso", time: "17:30 - 19:00", place: "Sala parroquial Valdefierro" },
+      { name: "Perfeccionamiento sevillanas", time: "19:00 - 20:30", place: "Sala parroquial Valdefierro" },
     ],
   },
   {
     day: "Viernes",
     classes: [
-      { name: "Palillos flamencos aplicados al folclore andaluz", time: "10:30 - 12:00", place: "Centro cívico Valdefierro", prof: "Sylvia Valle" },
+      { name: "Palillos flamencos aplicados al folclore andaluz", time: "10:30 - 12:00", place: "Centro cívico Valdefierro" },
     ],
   },
   {
     day: "Sábado",
     classes: [
-      { name: "Ensayo grupo estable", time: "10:00 - 12:00", place: "Centro cívico Valdefierro", prof: "Sylvia Valle" },
-      { name: "Folclore y flamenco infantil", time: "12:00 - 13:00", place: "Centro cívico Valdefierro", prof: "Sylvia Valle" },
+      { name: "Ensayo grupo estable", time: "10:00 - 12:00", place: "Centro cívico Valdefierro" },
+      { name: "Folclore y flamenco infantil", time: "12:00 - 13:00", place: "Centro cívico Valdefierro" },
     ],
   },
 ];
@@ -63,7 +63,6 @@ const ScheduleSection = () => {
                       <span className="text-primary text-sm font-semibold whitespace-nowrap ml-4">{c.time}</span>
                     </div>
                     <p className="text-flamenco-ivory/50 text-sm">{c.place}</p>
-                    <p className="text-flamenco-ivory/40 text-xs mt-1">Prof. {c.prof}</p>
                   </div>
                 ))}
               </div>
