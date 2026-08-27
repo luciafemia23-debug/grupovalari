@@ -10,7 +10,7 @@ const schedule = [
   {
     day: "Miércoles",
     classes: [
-      { name: "De septiembre a Octubre: preparación de la ofrenda de flores", time: "17:00 - 19:30", place: "Sala parroquial Valdefierro" },
+      { name: "De septiembre a Octubre: preparación de la ofrenda de flores", time: "17:00 - 19:00", place: "Sala parroquial Valdefierro" },
       { name: "Perfeccionamiento sevillanas", time: "19:00 - 20:30", place: "Sala parroquial Valdefierro" },
     ],
   },
