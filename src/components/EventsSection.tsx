@@ -7,16 +7,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-const events = [
-  {
-    id: 1,
-    title: "¡Empezamos curso!",
-    date: "15 de septiembre",
-    location: "Curso 26/27",
-    description: "www.grupovalari.com",
-    image: "/images/Empezamos-clases.png",
-  },
-];
+const events = [];
 
 const EventsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
