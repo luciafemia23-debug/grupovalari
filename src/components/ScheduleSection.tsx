@@ -10,7 +10,7 @@ const schedule = [
   {
     day: "Miércoles",
     classes: [
-      { name: "del 21 de octubre hasta diciembre: ensayo de flashmob", time: "17:30 - 19:00", place: "Sala parroquial Valdefierro" },
+      { name: "Del 21 de octubre hasta diciembre: ensayo de flashmob", time: "17:30 - 19:00", place: "Sala parroquial Valdefierro" },
       { name: "Perfeccionamiento sevillanas", time: "19:00 - 20:30", place: "Sala parroquial Valdefierro" },
     ],
   },
