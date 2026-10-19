@@ -14,7 +14,7 @@ const events = [
     title: "Ensayo de Flashmob de Flamenco",
     date: "Del 21 de octubre hasta diciembre",
     location: "Sala parroquial Valdefierro",
-    description: "Miércoles 17:30 - 19:00 | Preparación para nuestro flashmob navideño",
+    description: "Miércoles 18:00 - 19:00 | Preparación para nuestro flashmob navideño",
   },
 ];
 
