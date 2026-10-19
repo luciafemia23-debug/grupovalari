@@ -7,7 +7,16 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-const events = [];
+const events = [
+  {
+    id: 1,
+    image: "/images/cartel flashmob flameco ensayo.png",
+    title: "Ensayo de Flashmob de Flamenco",
+    date: "Del 21 de octubre hasta diciembre",
+    location: "Sala parroquial Valdefierro",
+    description: "Miércoles 17:30 - 19:00 | Preparación para nuestro flashmob navideño",
+  },
+];
 
 const EventsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
