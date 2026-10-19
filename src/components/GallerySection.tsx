@@ -11,7 +11,6 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
-import fiestasPilar from "/public/images/fiestas del pilar 2026.png";
 
 const galleryItems = [
   { src: gallery2 },
@@ -21,7 +20,7 @@ const galleryItems = [
   { src: gallery5 },
   { src: "/images/evento gastrobar.jpeg" },
   { src: "/images/final de curso 2026.jpeg" },
-  { src: fiestasPilar },
+  { src: "/images/fiestas del pilar.jpeg" },
 ];
 
 const GallerySection = () => {
