@@ -14,7 +14,8 @@ const events = [
     title: "Ensayo de Flashmob de Flamenco",
     date: "Del 21 de octubre hasta diciembre",
     location: "Sala parroquial Valdefierro",
-    description: "Miércoles 18:00 - 19:00 | Preparación para nuestro flashmob navideño",
+    description: "Miércoles 18:00 - 19:00",
+    detail: "Preparación para nuestro flashmob navideño",
   },
 ];
 
@@ -87,6 +88,7 @@ const EventsSection = () => {
                     <p className="text-foreground/70 mb-2">{event.date}</p>
                     <p className="text-foreground/50 text-sm mb-3">{event.location}</p>
                     <p className="text-primary font-semibold uppercase tracking-wider text-sm">{event.description}</p>
+                    <p className="text-primary font-semibold uppercase tracking-wider text-sm">{event.detail}</p>
                   </div>
                 </div>
               ))}
