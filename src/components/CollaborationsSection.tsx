@@ -41,7 +41,10 @@ const CollaborationsSection = () => {
               Sevillanas y flamenco
             </p>
             <p className="text-flamenco-ivory/80 mb-2">
-              Próximamente
+              A partir del 5 de noviembre, todos los jueves
+            </p>
+            <p className="text-flamenco-ivory/80 mb-2">
+              Jueves de 19:00 a 21:00 h.
             </p>
             <p className="text-flamenco-ivory/80 mb-6">
               C. de Contamina, 9, Casco Antiguo, 50003 Zaragoza
